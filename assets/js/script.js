@@ -1,4 +1,5 @@
-var movieTitle = document.getElementById('title');
+var characterName = document.getElementById('name');
+var characterDescription = document.getElementById('description');
 
 // API Keys
 var PRIV_KEY = "40c84da05fc44a62c6d200140a0dde5d926a0fd7";
@@ -22,9 +23,12 @@ function getMarvelResponse() {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {
+    .then(function (response) {
       //Using console.log to examine the data
-      console.log(data);
+      console.log(response);
+
+      characterName.innerHTML = response.data.results[0].name;
+      characterDescription.innerHTML = response.data.results[0].description
     })
 };
 
