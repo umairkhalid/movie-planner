@@ -12,6 +12,27 @@ body {
 	color: azure;
 	font: 25px;
 }
+/*search bar properties*/
+article {
+	display: flex;
+	justify-content: center;
+	margin: 40px;
+}
+
+/*search button*/
+#searchBtn {
+	background-color: var(--Blue);
+	color: azure;
+	font-size: 20px;
+}
+
+#searchBox {
+	display: flex;
+	justify-content: center;
+	background-color: var(--Blue);
+	color: azure;
+	font-size: 20px;
+}
 #name {
 	text-align: center;
 }
