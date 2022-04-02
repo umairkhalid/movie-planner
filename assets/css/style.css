@@ -13,7 +13,7 @@ body {
 	font: 25px;
 }
 /*search bar properties*/
-article {
+form {
 	display: flex;
 	justify-content: center;
 	margin: 40px;
