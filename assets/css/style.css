@@ -1,0 +1,71 @@
+/*These universal properties apply to the whole css*/
+* {
+	--Red: #ec5049;
+	--Blue: #0d278a;
+	--Pink: #f097d5;
+	--Purple: #7d2aac;
+	font-family: "Noto Serif", serif;
+}
+/*These are the wrapper/body container properties*/
+body {
+	background-color: black;
+	color: azure;
+	font: 25px;
+}
+/*search bar properties*/
+form {
+	display: flex;
+	justify-content: center;
+	margin: 40px;
+}
+
+/*search button*/
+#searchBtn {
+	background-color: var(--Blue);
+	color: azure;
+	font-size: 20px;
+}
+
+#searchBox {
+	display: flex;
+	justify-content: center;
+	background-color: var(--Blue);
+	color: azure;
+	font-size: 20px;
+}
+#name {
+	text-align: center;
+}
+#description {
+	font-weight: 100;
+	margin: 20px;
+}
+/*movie details list properties*/
+.movieDetails {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 0.8rem;
+	border-radius: 4px;
+	background: var(--Red);
+	color: azure;
+	font-size: 3rem;
+	margin-right: 25px;
+	font-size: 30px;
+}
+/*This is the movie detail list container properties when on hover state*/
+ul :hover {
+	cursor: pointer;
+	transform: scale(1.02);
+	transform: transform 100ms;
+	color: var(--Blue);
+}
+/*This styles the icon*/
+.fa-solid {
+	margin: 10px;
+	display: flex;
+}
+.movieDescription {
+	font-size: 20px;
+	margin: 10px;
+}

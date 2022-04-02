@@ -5,12 +5,48 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+		</style>
+		<script src="https://kit.fontawesome.com/2c4df21959.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<title>Document</title>
 	</head>
+	<!--This is the title of the page-->
+
 	<body>
-		<h1 id="name">Heading</h1>
-		<h2 id="description"></h2>
+		<header>
+			<!--This is the title of the page-->
+			<h1 id="name"></h1>
+			<!--This is the header description-->
+			<h2 id="description"></h2>
+           
+		</header>
+
+		<section>
+            <form>
+            <input type="search" id="searchBox">
+            <button id="searchBtn">Search</button>
+            </form>
+			<ul>
+				<!--These list out the movies and details-->
+				<li class="movieDetails">
+					Titanic
+					<p>	<div class="movieDescription">This is the movie description</div></p>
+					<i class="fa-solid fa-floppy-disk"></i>
+				</li>
+				<li class="movieDetails">
+					Wolverine
+					<p>		<div class="movieDescription">This is the movie description</div></p>
+					<i class="fa-solid fa-floppy-disk"></i>
+				</li>
+				<li class="movieDetails">
+					Gladiator
+					<p>	<div class="movieDescription">This is the movie description</div></p>
+					<i class="fa-solid fa-floppy-disk"></i>
+				</li>
+			</ul>
+		</section>
 	</body>
 
 	<script src="./assets/js/script.js"></script>
