@@ -47,7 +47,31 @@
 				</li>
 			</ul>
 		</section>
+
+		<section>
+			<div class="center">
+			  <h2>YouTube use iframe api</h2>
+		
+			  <div id="YouTube-player"></div>
+		
+			  <div>
+				<span class="nowrap">
+				  <button onclick="document.getElementById('YouTube-video-id').value='kVrqfYjkTdQ'; youTubePlayerChangeVideoId();" title="Titanic">1</button>
+				  <button onclick="document.getElementById('YouTube-video-id').value='toLpchTUYk8'; youTubePlayerChangeVideoId();" title="Wolverine">2</button>
+				  <button onclick="document.getElementById('YouTube-video-id').value='owK1qxDselE'; youTubePlayerChangeVideoId();" title="The Gladiator">3</button>
+				</span>
+		
+				<span class="nowrap margin-left-m margin-right-m">
+				  <label for="YouTube-video-id">videoId</label>:
+				  <input id="YouTube-video-id" type="text" value="kVrqfYjkTdQ" size="12" pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
+				</span>
+		
+			  </div>
+	  
+		
+		  </section>
 	</body>
 
 	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/youtube-api.js"></script>
 </html>
