@@ -27,7 +27,7 @@ function performSearch() {
 
 // function to store query string in global object 'headers'
 function updateQueryString() {
-	headers.s = searchBox.value;
+	headers.s = inputEl.value;
 }
 var headers = {
 	apikey: '630b3ac4',
