@@ -5,28 +5,29 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 		</style>
 		<script src="https://kit.fontawesome.com/2c4df21959.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./assets/css/style.css" />
-
-		<!-- showTrailer.js -->
-		<script src="./assets/js/showTrailer.js"></script>
-		<!-- google api for showTrailer.js -->
-		<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 	</head>
 	<!--This is the title of the page-->
 
 	<body>
-		<header>
-			<!--This is the title of the page-->
-			<h1 id="name"></h1>
-			<!--This is the header description-->
-			<h2 id="description"></h2>
-           
-		</header>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal modal-fixed-footer">
+		  <div class="modal-content">
+			<h4 style="color: black;">Movie Trailer</h4>
+			<p style="color: black;">movie details</p>
+		  </div>
+		  <div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+		  </div>
+		</div>
 
 		<section>
             <form>
@@ -35,17 +36,17 @@
             </form>
 			<ul>
 				<!--These list out the movies and details-->
-				<li class="movieDetails">
+				<li class="movieDetails waves-effect modal-trigger">
 					Titanic
 					<p>	<div class="movieDescription">This is the movie description</div></p>
 					<i class="fa-solid fa-floppy-disk"></i>
 				</li>
-				<li class="movieDetails">
+				<li class="movieDetails waves-effect modal-trigger">
 					Wolverine
 					<p>		<div class="movieDescription">This is the movie description</div></p>
 					<i class="fa-solid fa-floppy-disk"></i>
 				</li>
-				<li class="movieDetails">
+				<li class="movieDetails waves-effect modal-trigger">
 					Gladiator
 					<p>	<div class="movieDescription">This is the movie description</div></p>
 					<i class="fa-solid fa-floppy-disk"></i>
@@ -77,6 +78,8 @@
 		  </section>
 	</body>
 
-	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/modalPop.js"></script>
 	<script src="./assets/js/youtube-api.js"></script>
+	<script src="./assets/js/getMovieInfo.js" ></script>
+	<script src="./assets/js/showTrailer.js" ></script>
 </html>
