@@ -3,7 +3,8 @@
 // WHEN they click Enter in the search box, or when they click the submit button
 // THEN an API call to OMDB will fetch search results
 
-const resultGrid = document.getElementById('resultGrid');
+const resultGrid = document.getElementById("resultGrid");
+document.querySelectorAll("trailerBtn");
 
 // user can search by either clicking the submit button (magnifying glass)
 var buttonEl = document.getElementById('searchBtn');
@@ -116,6 +117,17 @@ function renderFunction() {
 						<p class="genre">Genre:</b>${movieInfo[i].Type}</p>
 						<p class="actors">Actors:</b>${movieInfo[i].Actors}</p>
 						<p class="plot">Plot:</b>${movieInfo[i].Plot}</p>
-					</div>`;
+					</div>
+					<a class="waves-effect waves-light btn">Trailer</a>`;
+			}
+		});
+
+	//Renders movie results//
+
+	function clearMovieInfo() {
+		while (movieInfo.length > 0) {
+			movieInfo.pop();
+		}
+
 	}
 }
