@@ -36,7 +36,7 @@ form {
 #name {
 	text-align: center;
 }
-#description {
+#year {
 	font-weight: 100;
 	margin: 20px;
 }
@@ -54,18 +54,9 @@ form {
 	font-size: 30px;
 }
 /*This is the movie detail list container properties when on hover state*/
-ul :hover {
+.movieDetails :hover {
 	cursor: pointer;
 	transform: scale(1.02);
 	transform: transform 100ms;
 	color: var(--Blue);
-}
-/*This styles the icon*/
-.fa-solid {
-	margin: 10px;
-	display: flex;
-}
-.movieDescription {
-	font-size: 20px;
-	margin: 10px;
 }

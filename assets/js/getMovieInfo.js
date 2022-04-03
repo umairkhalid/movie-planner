@@ -48,15 +48,15 @@ function callOMDB() {
 			}
 
 			// example render function
-			var movieUL = document.getElementById("MovieUL");
+			var ul = document.createElement("ul");
 			for (var i = 0; i < movieInfo.length; i++) {
-				var movieDetails = document.getElementsByClassName("movieDetails");
-				movieDetails.innerHTML = `<span class="movieResultTitle">${movieInfo[i].title}</span><span class="movieResultYear">(${movieInfo[i].year})</span><img class="movieResultPoster" src="${movieInfo[i].poster}">`;
-				movieUL.appendChild(movieDetails);
+				var li = document.createElement("li");
+				li.innerHTML = `<span class="movieResultTitle">${movieInfo[i].title}</span><span class="movieResultYear">(${movieInfo[i].year})</span><img class="movieResultPoster" src="${movieInfo[i].poster}">`;
+				ul.appendChild(li);
 			}
 
 			var bodyEl = document.querySelector("body");
-			bodyEl.appendChild(movieUL);
+			bodyEl.appendChild(ul);
 		});
 }
 
