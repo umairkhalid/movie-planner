@@ -5,35 +5,56 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 		</style>
 		<script src="https://kit.fontawesome.com/2c4df21959.js" crossorigin="anonymous"></script>
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
-
-		<!-- showTrailer.js -->
-		<script src="./assets/js/showTrailer.js"></script>
-		<!-- google api for showTrailer.js -->
-		<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 	</head>
 	<!--This is the title of the page-->
 
 	<body>
-		<header>
-			<!--This is the title of the page-->
-			<h1 id="name"></h1>
-			<!--This is the header description-->
-			<h2 id="description"></h2>
-           
-		</header>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal modal-fixed-footer">
+		  <div class="modal-content">
+			<h4 style="color: black;">Movie Trailer</h4>
+			<p style="color: black;">movie details</p>
+		  </div>
+		  <div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+		  </div>
+		</div>
 
 		<section>
             <form>
             <input type="search" id="searchBox">
             <button id="searchBtn">Search</button>
             </form>
+    
+			<ul>
+				<!--These list out the movies and details-->
+				<li class="movieDetails waves-effect modal-trigger">
+					Titanic
+					<p>	<div class="movieDescription">This is the movie description</div></p>
+					<i class="fa-solid fa-floppy-disk"></i>
+				</li>
+				<li class="movieDetails waves-effect modal-trigger">
+					Wolverine
+					<p>		<div class="movieDescription">This is the movie description</div></p>
+					<i class="fa-solid fa-floppy-disk"></i>
+				</li>
+				<li class="movieDetails waves-effect modal-trigger">
+					Gladiator
+					<p>	<div class="movieDescription">This is the movie description</div></p>
+					<i class="fa-solid fa-floppy-disk"></i>
+				</li>
+			</ul>
+
 			<section class="container">
 				<div class="resultContainer">
 					<div class="result-grid" id="resultGrid">
@@ -51,10 +72,11 @@
 					<p class="actors">Actors:</b>Leonard Di Caprio</p>
 					<p class="plot">Plot:</b>James Cameron's "Titanic" is an epic, action-packed romance set against the ill-fated maiden voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time, the largest moving object ever built. She was the most luxurious liner of her era -- the "ship of dreams" -- which ultimately carried over 1,500 people to their death in the ice cold waters of the North Atlantic in the early hours of April 15, 1912.
 					</p>
-				</div> --> -->
+				</div> --> 
 		</div>
 		</div>
 		</section>
+
 		</section>
 
 		<section>
@@ -80,9 +102,14 @@
 		
 		  </section>
 	</body>
+
+
+	<script src="./assets/js/modalPop.js"></script>
+	<script src="./assets/js/showTrailer.js" ></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./assets/js/script.js"></script>
 	<script src="./assets/js/youtube-api.js"></script>
 	<script src="./assets/js/getMovieInfo.js"></script>
+
 </html>
