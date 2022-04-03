@@ -32,6 +32,7 @@ function showTrailer(title, year) {
 		trailerURL.push(`https://www.youtube.com/embed/${response.result.items[0].id.videoId}`);
 
 		// testing only
+		// console.log(`The response is ${JSON.stringify(response)}`);
 		dummyRender(trailerURL[0]);
 	});
 }
@@ -42,22 +43,22 @@ function onClientLoad() {
 }
 
 function onYouTubeApiLoad() {
-	gapi.client.setApiKey('AIzaSyA-jBQgkd9GgT3Mo3GC0PgGG0fc3eXFr9Y');
+	gapi.client.setApiKey('AIzaSyCsZSrt3l_PmnuJaVxt_FRuhBZULQhKN8Q');
 }
 
 //  testing only
 function dummyRender(url) {
 	var bodyEl = document.querySelector('body');
-	var headingEl = document.createElement('h1')
-	headingEl.textContent = `dummyRender`
+	var headingEl = document.createElement('h1');
+	headingEl.textContent = `dummyRender`;
 	var iframeEl = document.createElement('iframe');
 	iframeEl.setAttribute('width', bodyEl.clientWidth);
-	iframeEl.setAttribute('height', bodyEl.clientHeight/2);
+	iframeEl.setAttribute('height', bodyEl.clientHeight / 2);
 	iframeEl.setAttribute('src', url);
 	iframeEl.setAttribute('title', `YouTube video player`);
 	iframeEl.setAttribute('frameborder', `0`);
 	iframeEl.setAttribute('allow', `accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture`);
 	iframeEl.setAttribute('allowfullscreen', '');
-	bodyEl.appendChild(headingEl)
+	bodyEl.appendChild(headingEl);
 	bodyEl.appendChild(iframeEl);
 }
