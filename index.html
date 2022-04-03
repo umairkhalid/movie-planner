@@ -10,6 +10,7 @@
 			@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 		</style>
 		<script src="https://kit.fontawesome.com/2c4df21959.js" crossorigin="anonymous"></script>
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- showTrailer.js -->
@@ -33,24 +34,27 @@
             <input type="search" id="searchBox">
             <button id="searchBtn">Search</button>
             </form>
-			<ul>
+			<section class="container">
+				<div class="resultContainer">
+					<div class="result-grid" id="resultGrid">
+						<div class="moivePoster"> <img src="./assets/images/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg" alt="movie.poster"></div>
+			
 				<!--These list out the movies and details-->
-				<li class="movieDetails">
-					Titanic
-					<p>	<div class="movieDescription">This is the movie description</div></p>
-					<i class="fa-solid fa-floppy-disk"></i>
-				</li>
-				<li class="movieDetails">
-					Wolverine
-					<p>		<div class="movieDescription">This is the movie description</div></p>
-					<i class="fa-solid fa-floppy-disk"></i>
-				</li>
-				<li class="movieDetails">
-					Gladiator
-					<p>	<div class="movieDescription">This is the movie description</div></p>
-					<i class="fa-solid fa-floppy-disk"></i>
-				</li>
-			</ul>
+				<div class="movieDetails">
+					<h3 class="title">Titanic</h3>
+				<ul class="movieUL">
+					<li class="movieInfo"></li>
+					<li class="year">Year: 1997</li>
+					<li class="rated">Rating</li>
+				</ul>
+					<p class="genre">Genre:</b>Romance</p>
+					<p class="actors">Actors:</b>Leonard Di Caprio</p>
+					<p class="plot">Plot:</b>James Cameron's "Titanic" is an epic, action-packed romance set against the ill-fated maiden voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time, the largest moving object ever built. She was the most luxurious liner of her era -- the "ship of dreams" -- which ultimately carried over 1,500 people to their death in the ice cold waters of the North Atlantic in the early hours of April 15, 1912.
+					</p>
+				</div>
+		</div>
+		</div>
+		</section>
 		</section>
 
 		<section>
@@ -76,7 +80,9 @@
 		
 		  </section>
 	</body>
-
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./assets/js/script.js"></script>
 	<script src="./assets/js/youtube-api.js"></script>
+	<script src="./assets/js/getMovieInfo.js"></script>
 </html>
