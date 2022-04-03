@@ -1,3 +1,6 @@
+/*footer style*/
+@import url(./footer.css);
+
 /*These universal properties apply to the whole css*/
 * {
 	--Red: #ec5049;

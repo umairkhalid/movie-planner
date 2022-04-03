@@ -1,0 +1,147 @@
+.social_icon {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    text-align: center;
+    background-color: none;
+}
+.social_icon div{
+    position: relative;
+    background-color:none;
+    size:10px;
+    margin: 1px;
+    padding: 1px;
+    font-size: 20px;
+}
+
+.facebook:hover {
+    background-color: blue;
+}
+
+.instagram:hover {
+    background-color:bisque;
+}
+
+.youtube:hover {
+    background-color:red;
+}
+
+.printerest:hover {
+    background-color:red;
+}
+
+.twitter:hover {
+    background-color:blue;
+}
+
+.social_icon > div > a > img {
+    width: 25%;
+}
+
+.copy {
+    text-align: center;
+    color: red;
+}
+
+@media only screen and (min-width:650px) and (max-width: 992px) {
+
+    .social_icon {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        text-align: center;
+        background-color: none;
+    }
+    .social_icon div{
+        position: relative;
+        background-color:none;
+        size:10px;
+        margin: 1px;
+        padding: 1px;
+        font-size: 20px;
+    }
+    
+    .facebook:hover {
+        background-color: blue;
+    }
+    
+    .instagram:hover {
+        background-color:bisque;
+    }
+    
+    .youtube:hover {
+        background-color:red;
+    }
+    
+    .printerest:hover {
+        background-color:red;
+    }
+    
+    .twitter:hover {
+        background-color:blue;
+    }
+    
+    .social_icon > div > a > img {
+        width: 25%;
+    }
+    
+    .copy {
+        text-align: center;
+        color: red;
+    }
+    
+}
+
+@media only screen and (max-width:650px) {
+
+    footer {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .social_icon {
+        display: flex;
+        flex-direction: row;
+    }
+    .social_icon div a {
+        background-color:none;
+        size:10px;
+        margin: 1px;
+        padding: 1px;
+        font-size: 20px;
+        align-items: center;
+    }
+    
+    .facebook:hover {
+        background-color: blue;
+    }
+    
+    .instagram:hover {
+        background-color:bisque;
+    }
+    
+    .youtube:hover {
+        background-color:red;
+    }
+    
+    .printerest:hover {
+        background-color:red;
+    }
+    
+    .twitter:hover {
+        background-color:blue;
+    }
+    
+    .social_icon > div > a > img {
+        width: 80%;
+        align-items: center;
+    }
+    
+    .copy {
+        align-items: center;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+    }
+
+}
