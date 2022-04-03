@@ -4,7 +4,6 @@
 // THEN an API call to OMDB will fetch search results
 
 const resultGrid = document.getElementById("resultGrid");
-document.querySelectorAll("trailerBtn");
 
 // user can search by either clicking the submit button (magnifying glass)
 var buttonEl = document.getElementById("searchBtn");
@@ -101,7 +100,7 @@ function renderFunction() {
 						<p class="actors">Actors:</b>${actors[i]}</p>
 						<p class="plot">Plot:</b>${plots[i]}</p>
 					</div>
-					<a class="trailerBtn waves-effect waves-light btn">Trailer</a>`;
+					<button data-target="modal1" class="btn waves-effect waves-light modal-trigger">Trailer</button>`;
 	}
 }
 
