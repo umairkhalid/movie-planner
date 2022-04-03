@@ -36,27 +36,3 @@ form {
 #name {
 	text-align: center;
 }
-#year {
-	font-weight: 100;
-	margin: 20px;
-}
-/*movie details list properties*/
-.movieDetails {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin-bottom: 0.8rem;
-	border-radius: 4px;
-	background: var(--Red);
-	color: azure;
-	font-size: 3rem;
-	margin-right: 25px;
-	font-size: 30px;
-}
-/*This is the movie detail list container properties when on hover state*/
-.movieDetails :hover {
-	cursor: pointer;
-	transform: scale(1.02);
-	transform: transform 100ms;
-	color: var(--Blue);
-}
