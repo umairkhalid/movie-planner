@@ -61,17 +61,17 @@ function callOMDB() {
 			for (var i = 0; i < movieInfo.length; i++) {
 				resultGrid.innerHTML = `
 					<div class="moviePoster">
-					<img src = (${movieInfo[i].poster})></div>
+					<img src = ${movieInfo[i].poster}></div>
 					<div class="movieDetails">
-						<h3 class="title">(${movieInfo[i].title})</h3>
+						<h3 class="title">${movieInfo[i].title}</h3>
 					<ul class="movieUL">
 						<li class="movieInfo"></li>
-						<li class="year">Year: (${movieInfo[i].year})</li>
-						<li class="rated">Rating: (${movieInfo[i].Rated})</li>
+						<li class="year">Year: ${movieInfo[i].year}</li>
+						<li class="rated">Rating: ${movieInfo[i].Rated}</li>
 					</ul>
-						<p class="genre">Genre:</b>(${movieInfo[i].Type})</p>
-						<p class="actors">Actors:</b>(${movieInfo[i].Actors})</p>
-						<p class="plot">Plot:</b>(${movieInfo[i].Plot})</p>
+						<p class="genre">Genre:</b>${movieInfo[i].Type}</p>
+						<p class="actors">Actors:</b>${movieInfo[i].Actors}</p>
+						<p class="plot">Plot:</b>${movieInfo[i].Plot}</p>
 					</div>`;
 			}
 		});
