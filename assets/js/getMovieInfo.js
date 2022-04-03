@@ -4,16 +4,16 @@
 // THEN an API call to OMDB will fetch search results
 
 // user can search by either clicking the submit button (magnifying glass)
-var buttonEl = document.getElementById('searchBtn');
-buttonEl.addEventListener('click', (e) => {
+var buttonEl = document.getElementById("searchBtn");
+buttonEl.addEventListener("click", (e) => {
 	e.preventDefault();
 	performSearch();
 });
 
 // user can also search by typing enter button while inside the search field
-var inputEl = document.getElementById('searchBox');
-inputEl.addEventListener('keypress', (e) => {
-	if (e.key === 'Enter') {
+var inputEl = document.getElementById("searchBox");
+inputEl.addEventListener("keypress", (e) => {
+	if (e.key === "Enter") {
 		e.preventDefault();
 		performSearch();
 	}
@@ -30,14 +30,14 @@ function updateQueryString() {
 	headers.s = inputEl.value;
 }
 var headers = {
-	apikey: '630b3ac4',
-	type: 'movie',
-	s: 'titanic',
+	apikey: "630b3ac4",
+	type: "movie",
+	s: "titanic",
 };
 
 const movieInfo = [];
 function callOMDB() {
-	fetch('http://www.omdbapi.com/?' + 'apikey=' + headers.apikey + '&type=' + headers.type + '&s=' + headers.s + '&r=json&page=1')
+	fetch("http://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&s=" + headers.s + "&r=json&page=1")
 		.then(function (response) {
 			return response.json();
 		})
@@ -48,15 +48,15 @@ function callOMDB() {
 			}
 
 			// example render function
-			var ul = document.createElement('ul');
+			var movieUL = document.getElementById("MovieUL");
 			for (var i = 0; i < movieInfo.length; i++) {
-				var li = document.createElement('li');
-				li.innerHTML = `<span class="movieResultTitle">${movieInfo[i].title}</span><span class="movieResultYear">(${movieInfo[i].year})</span><img class="movieResultPoster" src="${movieInfo[i].poster}">`;
-				ul.appendChild(li);
+				var movieDetails = document.getElementsByClassName("movieDetails");
+				movieDetails.innerHTML = `<span class="movieResultTitle">${movieInfo[i].title}</span><span class="movieResultYear">(${movieInfo[i].year})</span><img class="movieResultPoster" src="${movieInfo[i].poster}">`;
+				movieUL.appendChild(movieDetails);
 			}
 
-			var bodyEl = document.querySelector('body');
-			bodyEl.appendChild(ul);
+			var bodyEl = document.querySelector("body");
+			bodyEl.appendChild(movieUL);
 		});
 }
 
