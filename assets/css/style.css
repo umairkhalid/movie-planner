@@ -42,3 +42,18 @@ form {
 .waves-effect {
 	background-color: #ec5049;
 }
+
+.dropdown-trigger {
+
+	position: relative;
+    left: 3rem;
+    margin-top: -3rem;
+    width: 50%;
+
+}
+
+.dropdown-content li>a {
+	color: black;
+	text-align: center;
+}
+
