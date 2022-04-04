@@ -2,6 +2,7 @@
 // var dropThreeSearches = $(".dropdown-trigger");
 
 $(document).ready(function () {
+
 	var elem = $('.modal');
 	var savedSearches = $('.dropdown-trigger');
 
@@ -70,3 +71,4 @@ function updateTrailerID(title, year) {
 		}
 	}, 500);
 }
+

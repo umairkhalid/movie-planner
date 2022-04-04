@@ -44,16 +44,17 @@ form {
 }
 
 .dropdown-trigger {
-
 	position: relative;
-    left: 3rem;
-    margin-top: -3rem;
-    width: 50%;
-
+	left: 3rem;
+	margin-top: -3rem;
+	width: 50%;
 }
 
-.dropdown-content li>a {
+.dropdown-content li > a {
 	color: black;
 	text-align: center;
 }
 
+.moviePoster {
+	border: 20px;
+}
