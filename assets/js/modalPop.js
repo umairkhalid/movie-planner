@@ -3,8 +3,8 @@
 
 $(document).ready(function () {
 	var elem = $(".modal");
-	var savedSearches = $('.dropdown-trigger');
-	
+	var savedSearches = $(".dropdown-trigger");
+
 	savedSearches.dropdown();
 	elem.modal();
 
@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 	M.Dropdown.init(savedSearches, {
 		inDuration: 500,
-		coverTrigger: false
+		coverTrigger: false,
 	});
 });
 
@@ -33,5 +33,3 @@ $(document).ready(function () {
 // }
 
 //modalPopup.on("click", modalToggler);
-
-  

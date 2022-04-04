@@ -86,7 +86,7 @@ function callOMDB() {
 
 function renderFunction() {
 	for (var i = 0; i < posters.length; i++) {
-		resultGrid.innerHTML = `
+		resultGrid.innerHTML += `
 					<div class="moviePoster">
 					<img src = ${posters[i]}></div>
 					<div class="movieDetails">
@@ -96,9 +96,9 @@ function renderFunction() {
 						<li class="year">Year: ${years[i]}</li>
 						<li class="rated">Rating: ${ratings[i]}</li>
 					</ul>
-						<p class="genre">Genre:</b>${genres[i]}</p>
-						<p class="actors">Actors:</b>${actors[i]}</p>
-						<p class="plot">Plot:</b>${plots[i]}</p>
+						<p class="genre">Genre: </b>${genres[i]}</p>
+						<p class="actors">Actors: </b>${actors[i]}</p>
+						<p class="plot">Plot: </b>${plots[i]}</p>
 					</div>
 					<button data-target="modal1" class="btn waves-effect waves-light modal-trigger">Trailer</button>`;
 	}
