@@ -2,8 +2,9 @@
 // var dropThreeSearches = $(".dropdown-trigger");
 
 $(document).ready(function () {
-	var elem = $(".modal");
-	var savedSearches = $(".dropdown-trigger");
+
+	var elem = $('.modal');
+	var savedSearches = $('.dropdown-trigger');
 
 	savedSearches.dropdown();
 	elem.modal();
@@ -33,3 +34,41 @@ $(document).ready(function () {
 // }
 
 //modalPopup.on("click", modalToggler);
+
+// add event listeners to all buttons
+function addListeners() {
+	var allButtons = document.querySelectorAll('.btn.waves-effect.waves-light.modal-trigger');
+	allButtons.forEach(function (trailerBtn) {
+		trailerBtn.addEventListener('click', (event) => {
+			// var details = event.target.parentElement.children[1];
+			var title = event.target.parentElement.querySelector('.title').textContent;
+			var year = event.target.parentElement.querySelector('.year').textContent.split('Year: ')[1];
+			console.log(`The event.target is event.target`, event.target);
+			console.log(`The event.target.parentElement is`, event.target.parentElement);
+
+			console.log(`The clicked title is ${title} and the clicked year is ${year}`);
+			updateTrailerID(title, year);
+			console.log('Now rendering function:');
+		});
+	});
+}
+
+// when button is clicked, get its title and year, update trailer, wait 2 seconds, then update YouTube-video-id
+function updateTrailerID(title, year) {
+	var trailerIDEl = document.getElementById('YouTube-video-id');
+	var trailerIDElsrc = document.getElementById('YouTube-player');
+	// call YouTube Data API to generate a trailer
+	showTrailer(title, year);
+
+	// as it will take a while, check every 500ms to see if trailer has been pushed
+	var checkForTrailer = setInterval(() => {
+		if (trailerURL.length !== 0) {
+			var videolink = trailerURL[0];
+			trailerIDElsrc.setAttribute('src', `${videolink}`);
+			trailerIDEl.value = videolink;
+			clearInterval(checkForTrailer);
+			dummyRender();
+		}
+	}, 500);
+}
+

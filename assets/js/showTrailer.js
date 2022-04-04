@@ -32,8 +32,8 @@ function showTrailer(title, year) {
 		trailerURL.push(`https://www.youtube.com/embed/${response.result.items[0].id.videoId}`);
 
 		// testing only
-		// console.log(`The response is ${JSON.stringify(response)}`);
-		dummyRender(trailerURL[0]);
+		console.log(`The response is ${JSON.stringify(response)}`);
+		// dummyRender(trailerURL[0]);
 	});
 }
 
@@ -47,18 +47,22 @@ function onYouTubeApiLoad() {
 }
 
 //  testing only
-function dummyRender(url) {
-	var bodyEl = document.querySelector('body');
-	var headingEl = document.createElement('h1');
-	headingEl.textContent = `dummyRender`;
+function dummyRender() {
+	// var bodyEl = document.querySelector('body');
+	// var headingEl = document.createElement('h1');
+	// headingEl.textContent = `dummyRender`;
+	var movieEl = document.querySelector('.modal-content');
+	movieEl.innerHTML = '';
+
 	var iframeEl = document.createElement('iframe');
-	iframeEl.setAttribute('width', bodyEl.clientWidth);
-	iframeEl.setAttribute('height', bodyEl.clientHeight / 2);
-	iframeEl.setAttribute('src', url);
+	iframeEl.setAttribute('width', movieEl.clientWidth);
+	iframeEl.setAttribute('height', movieEl.clientHeight / 2);
+	console.log('The trailer url generated is ' + trailerURL[0]);
+	iframeEl.setAttribute('src', trailerURL[0]);
 	iframeEl.setAttribute('title', `YouTube video player`);
 	iframeEl.setAttribute('frameborder', `0`);
 	iframeEl.setAttribute('allow', `accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture`);
 	iframeEl.setAttribute('allowfullscreen', '');
-	bodyEl.appendChild(headingEl);
-	bodyEl.appendChild(iframeEl);
+
+	movieEl.appendChild(iframeEl);
 }
