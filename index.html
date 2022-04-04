@@ -12,7 +12,6 @@
 			@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 		</style>
 		<script src="https://kit.fontawesome.com/2c4df21959.js" crossorigin="anonymous"></script>
-		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		
 	</head>
@@ -32,45 +31,58 @@
 		</div>
 
 		<section>
-            <form>
-            <input type="search" id="searchBox">
-            <button id="searchBtn">Search</button>
+			<div>
+				<form>
+				<input type="search" id="searchBox">
+				<button id="searchBtn">Search</button>
+			</div>
+			<div id="holdContainer">
+				<!-- Dropdown Trigger -->
+				<a class='dropdown-trigger btn grey darken-4' href='#' data-target='dropdown1'>Recent Searches</a>
+
+				<!-- Dropdown Structure -->
+				<ul id='dropdown1' class='dropdown-content grey lighten-1'>
+					<li><a href="#!">Dune 2021</a></li>
+					<li><a href="#!">Titanic 1997</a></li>
+					<li><a href="#!">Moon Knight 2022</a></li>
+				</ul>
+			</div>
             </form>
-    
-			<ul>
-				<li class="trailerBtn waves-effect modal-trigger"></li>
-			</ul>
+		
 
 			<section class="container">
 				<div class="resultContainer">
 					<div class="result-grid" id="resultGrid">
-		</div>
-		</div>
-		</section>
+
+						<!-- MOVIE RESULTS LOAD HERE -->
+					
+					</div>
+				</div>
+			</section>
 
 		</section>
 
 		<section>
 			<div class="center">
-			  <h2>Related Trailer To Your Search</h2>
+
+			  	<h2>Related Trailer To Your Search</h2>
 		
-			  <div id="YouTube-player"></div>
+			  	<div id="YouTube-player"></div>
 		
-			  <div>
-				<span class="nowrap">
-				  <button onclick="document.getElementById('YouTube-video-id').value='kVrqfYjkTdQ'; youTubePlayerChangeVideoId();" title="Titanic">1</button>
-				  <button onclick="document.getElementById('YouTube-video-id').value='toLpchTUYk8'; youTubePlayerChangeVideoId();" title="Wolverine">2</button>
-				  <button onclick="document.getElementById('YouTube-video-id').value='owK1qxDselE'; youTubePlayerChangeVideoId();" title="The Gladiator">3</button>
-				</span>
+				<div>
+					<span class="nowrap">
+						<button onclick="document.getElementById('YouTube-video-id').value='kVrqfYjkTdQ'; youTubePlayerChangeVideoId();" title="Titanic">1</button>
+						<button onclick="document.getElementById('YouTube-video-id').value='toLpchTUYk8'; youTubePlayerChangeVideoId();" title="Wolverine">2</button>
+						<button onclick="document.getElementById('YouTube-video-id').value='owK1qxDselE'; youTubePlayerChangeVideoId();" title="The Gladiator">3</button>
+					</span>
+				</div>
 		
 				<span class="nowrap margin-left-m margin-right-m">
-				  <input id="YouTube-video-id" type="text" value="kVrqfYjkTdQ" size="12" pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
+					<input id="YouTube-video-id" type="text" value="kVrqfYjkTdQ" size="12" pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
 				</span>
 		
-			  </div>
-	  
-		
-		  </section>
+			</div>
+		</section>
 	</body>
 
 	<footer>
