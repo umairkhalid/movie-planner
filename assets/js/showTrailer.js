@@ -29,10 +29,11 @@ function showTrailer(title, year) {
 		maxResults: 1,
 	});
 	request.execute(function (response) {
+		console.log(`The response is ${JSON.stringify(response)}`);
 		trailerURL.push(`https://www.youtube.com/embed/${response.result.items[0].id.videoId}`);
 
 		// testing only
-		console.log(`The response is ${JSON.stringify(response)}`);
+		
 		// dummyRender(trailerURL[0]);
 	});
 }

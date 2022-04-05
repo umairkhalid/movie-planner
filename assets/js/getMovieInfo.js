@@ -4,6 +4,7 @@
 // THEN an API call to OMDB will fetch search results
 
 const resultGrid = document.getElementById("resultGrid");
+var recentSearchBtn = document.getElementById("searchButton")
 
 // user can search by either clicking the submit button (magnifying glass)
 var buttonEl = document.getElementById("searchBtn");
@@ -39,6 +40,8 @@ function performSearch() {
 }
 
 function init() {
+	
+
 	renderRecentSearches(); // run on page load
 }
 init();
@@ -46,9 +49,29 @@ init();
 // TODO: a function to render recent searches. Run this function here, and also on startup.
 // TODO: This function will get list from local storage, delete all the children from the dropdown ul, and render the recent search results from scratch;
 function renderRecentSearches() {
-	var movieHistory = JSON.parse(localStorage.getItem("movieList")) || [];
-	console.log(movieHistory);
+	console.log("reder")
+	var movieSearch = document.querySelector("#movieList");
+	var movieList = JSON.parse(localStorage.getItem("movieList")) || [];
+	console.log(movieList);
+	
+
+	movieSearch.innerHTML = "";
+	for (var i = 0; i <movieList.length; i++) {
+		var movieName = movieList[i].title;
+
+		var li = document.createElement("li");
+		li.textContent = movieName;
+
+		movieSearch.appendChild(li);
+	}
 }
+
+recentSearchBtn.addEventListener("click",function(){
+	console.log("hello world")
+	renderRecentSearches();
+}) 
+	
+
 
 // function to store query string in global object 'headers'
 function updateQueryString() {
