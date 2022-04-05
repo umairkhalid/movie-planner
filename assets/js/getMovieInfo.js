@@ -115,6 +115,7 @@ function callOMDB() {
 }
 
 function renderFunction() {
+	resultGrid.innerHTML = "";
 	for (var i = 0; i < posters.length; i++) {
 		resultGrid.innerHTML += `
 					<div class= "resultContainer">
