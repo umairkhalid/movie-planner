@@ -5,8 +5,8 @@
 * {
 	--Red: #ec5049;
 	--Blue: #0d278a;
-	--Pink: #f097d5;
 	--Purple: #7d2aac;
+	--Yellow: #ffea00;
 	font-family: "Noto Serif", serif;
 }
 /*These are the wrapper/body container properties*/
@@ -39,9 +39,6 @@ form {
 #name {
 	text-align: center;
 }
-.waves-effect {
-	background-color: #ec5049;
-}
 
 .dropdown-trigger {
 	position: relative;
@@ -55,6 +52,47 @@ form {
 	text-align: center;
 }
 
-.moviePoster {
-	border: 20px;
+.resultContainer {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.moviePoster img {
+	border: 4px, solid --Red;
+}
+
+.title {
+	color: var(--Red);
+}
+
+li.year {
+	margin: 10px;
+}
+
+li.rated {
+	background-color: var(--Purple);
+}
+
+.genre {
+	background-color: #212121;
+}
+
+@media (min-width: 800px) {
+	.resultContainer {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-left: 120px;
+	}
+	.movieDetails {
+		margin: 30px;
+		text-align: center;
+	}
+}
+@media (max-width: 800px) {
+	.resultContainer {
+		text-align: center;
+	}
+	.movieDetails {
+		margin: 30px;
+	}
 }
