@@ -62,7 +62,6 @@ function dummyRender() {
 	var iframeEl = document.createElement('iframe');
 	iframeEl.setAttribute('width', movieEl.clientWidth);
 	iframeEl.setAttribute('height', movieEl.clientHeight);
-	console.log('The trailer url generated is ' + trailerURL[0]);
 	iframeEl.setAttribute('src', trailerURL[0]);
 	iframeEl.setAttribute('title', `YouTube video player`);
 	iframeEl.setAttribute('frameborder', `0`);
