@@ -103,7 +103,7 @@ var actors = [];
 var plots = [];
 var ratings = [];
 function callOMDB() {
-	fetch("http://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&s=" + headers.s + "&page=1")
+	fetch("https://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&s=" + headers.s + "&page=1")
 		.then(function (generalSearchResult) {
 			return generalSearchResult.json();
 		})
@@ -117,7 +117,7 @@ function callOMDB() {
 				titles.push(data1.Search[i].Title);
 				years.push(data1.Search[i].Year);
 
-				fetch("http://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&i=" + data1.Search[i].imdbID)
+				fetch("https://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&i=" + data1.Search[i].imdbID)
 					.then(function (specificSearchResult) {
 						return specificSearchResult.json();
 					})
