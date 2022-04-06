@@ -110,6 +110,10 @@ function callOMDB() {
 
 		.then(function (data1) {
 			// console.log(data1);
+
+			// clear metadata stack
+			clearMovieInfo();
+			
 			// for each movie search result
 			for (i = 0; i < data1.Search.length; i++) {
 				// push the general metadata
@@ -169,9 +173,14 @@ function renderFunction() {
 	}
 }
 
-//Renders movie results//
+// Clear metadata stack
 function clearMovieInfo() {
-	while (posters.length > 0) {
-		posters.pop();
-	}
+	while (posters.pop())
+	while (titles.pop());
+	while (years.pop());
+	while (ratings.pop());
+	while (esrbs.pop());
+	while (genres.pop());
+	while (actors.pop());
+	while (plots.pop());
 }
