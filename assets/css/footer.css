@@ -1,3 +1,12 @@
+/* 
+footer.css
+this document contains the css code to style the footer in index.html 
+Copyright MOOVEE Team 2022
+*/
+
+/* classes */
+
+/* container for all of the social icon containers  */
 .social_icon {
     display: flex;
     flex-direction: row;
@@ -5,6 +14,8 @@
     text-align: center;
     background-color: none;
 }
+
+/* social icon containers */
 .social_icon div{
     position: relative;
     background-color:none;
@@ -14,6 +25,7 @@
     font-size: 20px;
 }
 
+/* highlight social icons on hover */
 .facebook:hover {
     background-color: blue;
 }
@@ -34,14 +46,18 @@
     background-color:blue;
 }
 
+/* 4 icons, so size them evenly */
 .social_icon > div > a > img {
     width: 25%;
 }
 
+/* styling for copyright text */
 .copy {
     text-align: center;
     color: red;
 }
+
+/* media queries for responsiveness */
 
 @media only screen and (min-width:650px) and (max-width: 992px) {
 
