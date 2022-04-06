@@ -31,10 +31,6 @@ function showTrailer(title, year) {
 	request.execute(function (response) {
 		// push the trailer url to global object trailerURL
 		trailerURL.push(`https://www.youtube.com/embed/${response.result.items[0].id.videoId}`);
-
-		// testing only
-		
-		// dummyRender(trailerURL[0]);
 	});
 }
 
@@ -49,9 +45,6 @@ function onYouTubeApiLoad() {
 
 // This renders the iframe with the trailer inside
 function dummyRender() {
-	// var bodyEl = document.querySelector('body');
-	// var headingEl = document.createElement('h1');
-	// headingEl.textContent = `dummyRender`;
 
 	// grab the movie content area inside the modal
 	var movieEl = document.querySelector('.modal-content');

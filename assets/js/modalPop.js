@@ -8,9 +8,7 @@ Copyright 2022 MOOVEE Team
  WHEN user clicks on the Trailer button from the search page, 
  THEN an API call to YouTube will fetch the most relevant trailer and render it  to the page
 
- */
-//var modalPopup = $(".trailerBtn");
-// var dropThreeSearches = $(".dropdown-trigger");
+*/
 
 // function to load event listeners to the dropdown history button, and also to toggle the popup modal
 // both of these UI elements use the Materialize framework: 
@@ -46,19 +44,6 @@ function clearTrailer() {
 	// clear the iframe from modal content area
 	movieEl.innerHTML = '';
 }
-// function modalToggler() {
-// 	var elem = $("#modal1");
-// 	instance = M.Modal.getInstance(elem);
-// 	instance.open();
-// }
-
-// function dropDownSearches(){
-// 	var savedSearches = $("#dropdown1");
-// 	var dropInstance = M.Dropdown.getInstance(savedSearches);
-// 	dropInstance.open();
-// }
-
-//modalPopup.on("click", modalToggler);
 
 // add event listeners to all buttons
 // these buttons will grab the button's corresponding movie title and movie year, and then pass the arguments to YouTube to search for a trailer
