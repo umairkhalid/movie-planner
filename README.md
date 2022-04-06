@@ -34,15 +34,18 @@ To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-plan
 
 ### Screenshot of MOOVEE with Search Result
 
-![Screenshot 1](https://picsum.photos/500/50.jpg)
+![MOOVEE Search Result](./assets/images/moovee-search-result.jpg)
+
+![MOOVEE Search Result](./assets/images/moovee-search-result-wide.jpg)
+
 
 ### Screenshot of MOOVEE with Recent Searches
 
-![Screenshot 1](https://picsum.photos/500/50.jpg)
+![MOOVEE Recent Searches](./assets/images/moovee-recent-searches.jpg)
 
 ### Screenshot of MOOVEE with Modal Popup
 
-![Screenshot 1](https://picsum.photos/500/50.jpg)
+![MOOVEE Modal Popup](./assets/images/moovee-modal-popup.jpg)
 
 ## Documentation
 
