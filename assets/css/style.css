@@ -40,10 +40,22 @@ form {
 	text-align: center;
 }
 
+.modal.modal-fixed-footer .modal-content {
+	height: calc(100% - -10px);
+	overflow: hidden;
+}
+
+.modal .modal-content {
+	padding: 0;
+}
+
+.preloader-wrapper {
+	margin-top: 10rem;
+}
+
 .dropdown-trigger {
 	position: relative;
 	left: 3rem;
-	margin-top: -3rem;
 	width: 50%;
 }
 

@@ -26,29 +26,33 @@
 		<div id="modal1" class="modal modal-fixed-footer">
 			<div class="modal-content">
 				<section>
-					<div class="center">
-				  		<h4 style="color: black;">Movie Trailer</h4>
-			
-						<div id="YouTube-player"></div>
-		
-						<div>
-							<span class="nowrap margin-left-m margin-right-m">
-								<input id="YouTube-video-id" type="text" value="WELCOME TO MOOVEE THE MOVIE" size="12" pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
-							</span>
+					<center>
+					<div class="preloader-wrapper big active">
+						<div class="spinner-layer spinner-red-only">
+						  <div class="circle-clipper left">
+							<div class="circle"></div>
+						  </div><div class="gap-patch">
+							<div class="circle"></div>
+						  </div><div class="circle-clipper right">
+							<div class="circle"></div>
+						  </div>
 						</div>
-					</div>
+					  </div>
+					</center>
 				</section>
 		  	</div>
 			<div class="modal-footer">
 				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
 			</div>
 		</div>
-
+		
 		<section>
 			<div>
-				<form>
-				<input type="search" id="searchBox">
-				<button id="searchBtn">Search</button>
+				<form class="input-field col s6">
+					<input type="search" id="searchBox" class="validate">
+					<label for="searchBox">Search for Movie here..</label>
+					<button id="searchBtn">Search</button>
+				</form>
 			</div>
 			<div id="holdContainer">
 				<!-- Dropdown Trigger -->
