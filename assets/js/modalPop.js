@@ -55,17 +55,12 @@ function addListeners() {
 
 // when button is clicked, get its title and year, update trailer, wait 2 seconds, then update YouTube-video-id
 function updateTrailerID(title, year) {
-	var trailerIDEl = document.getElementById('YouTube-video-id');
-	var trailerIDElsrc = document.getElementById('YouTube-player');
 	// call YouTube Data API to generate a trailer
 	showTrailer(title, year);
 
 	// as it will take a while, check every 500ms to see if trailer has been pushed
 	var checkForTrailer = setInterval(() => {
 		if (trailerURL.length !== 0) {
-			var videolink = trailerURL[0];
-			trailerIDElsrc.setAttribute('src', `${videolink}`);
-			trailerIDEl.value = videolink;
 			clearInterval(checkForTrailer);
 			dummyRender();
 		}
