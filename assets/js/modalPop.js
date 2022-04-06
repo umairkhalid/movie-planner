@@ -13,6 +13,7 @@ $(document).ready(function () {
 		opacity: 0.9,
 		inDuration: 500,
 		outDuration: 500,
+		onCloseEnd: clearTrailer,
 	});
 
 	M.Dropdown.init(savedSearches, {
@@ -21,6 +22,13 @@ $(document).ready(function () {
 	});
 });
 
+function clearTrailer() {
+	// clear trailer from metadata
+	while (trailerURL.pop());
+	// clear trailer from iframe
+	var movieEl = document.querySelector('.modal-content');
+	movieEl.innerHTML = '';
+}
 // function modalToggler() {
 // 	var elem = $("#modal1");
 // 	instance = M.Modal.getInstance(elem);
