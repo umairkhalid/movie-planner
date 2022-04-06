@@ -17,6 +17,7 @@ Copyright 2022 MOOVEE Team
  */
 // handle for container to hold results 
 const resultGrid = document.getElementById("resultGrid");
+
 // handle for search button
 var recentSearchBtn = document.getElementById("searchButton")
 
@@ -68,6 +69,7 @@ init();
 // function to render recent searches. Run this function when button is pressed, and also on startup.
 // this function will get list from local storage, delete all the children from the dropdown ul, and render the recent search results from scratch;
 function renderRecentSearches() {
+
 	// grab the container for the dropdown list of local history
 	var movieSearch = document.querySelector('#movieList');
 	// grab the local history and parse it into an array
@@ -76,6 +78,7 @@ function renderRecentSearches() {
 	// delete all the children from the dropdown ul
 	movieSearch.innerHTML = '';
 	// loop through list of locally stored titles and render the recent search results from scratch
+
 	for (var i = 0; i < movieList.length; i++) {
 		var movieName = movieList[i].title;
 
@@ -86,9 +89,9 @@ function renderRecentSearches() {
 	}
 
 	// add listeners to searches so they will performSearch on click
-	var listItems = document.querySelectorAll('#movieList li');
+	var listItems = document.querySelectorAll("#movieList li");
 	listItems.forEach((listItem) => {
-		listItem.addEventListener('click', () => {
+		listItem.addEventListener("click", () => {
 			inputEl.value = listItem.textContent;
 			performSearch();
 		});
@@ -98,9 +101,7 @@ function renderRecentSearches() {
 // add a listener on startup to render recent searches
 recentSearchBtn.addEventListener("click",function(){
 	renderRecentSearches();
-}) 
-	
-
+});
 
 // function to store query string in global object 'headers'
 function updateQueryString() {
@@ -131,10 +132,9 @@ function callOMDB() {
 		})
 
 		.then(function (data1) {
-
 			// clear metadata stack
 			clearMovieInfo();
-			
+
 			// for each movie search result
 			for (i = 0; i < data1.Search.length; i++) {
 				// push the general metadata
@@ -186,17 +186,17 @@ function renderFunction() {
 					</ul>
 						<p class="genre"><b>Genre: </b>${genres[i]}</p>
 						<p class="actors"><b>Actors: </b>${actors[i]}</p>
-						<p class="plot"><b>Plot: </b>${plots[i]}</p>
+						<p class="plot"><b>Plot: </b>${plots[i]}</p>					
+						<button data-target="modal1" class="btn waves-effect waves-light modal-trigger red darken-4">Trailer</button>
 					</div>
-					<button data-target="modal1" class="btn waves-effect waves-light modal-trigger red darken-4">Trailer</button>
+
 					</div>`;
 	}
 }
 
 // Clear metadata stack
 function clearMovieInfo() {
-	while (posters.pop())
-	while (titles.pop());
+	while (posters.pop()) while (titles.pop());
 	while (years.pop());
 	while (ratings.pop());
 	while (esrbs.pop());

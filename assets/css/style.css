@@ -9,10 +9,8 @@ Copyright MOOVEE Team 2022
 
 /*These universal properties apply to the whole css*/
 * {
-	--Red: #ec5049;
 	--Blue: #0d278a;
 	--Purple: #7d2aac;
-	--Yellow: #ffea00;
 	font-family: "Noto Serif", serif;
 }
 /*These are the wrapper/body container properties*/
@@ -25,24 +23,40 @@ body {
 form {
 	display: flex;
 	justify-content: center;
-	margin: 40px;
+}
+
+.search.content {
+	text-align: center;
+}
+
+.search-area {
+	display: flex;
+	justify-content: center;
 }
 
 /*search button*/
 #searchBtn {
-	background-color: var(--Blue);
+	background-color: var(--Purple);
 	color: azure;
 	font-size: 20px;
+	font-family: "Noto Serif", serif;
 }
 
 /* the input element for the search query */
 #searchBox {
 	display: flex;
 	justify-content: center;
-	background-color: var(--Blue);
+	background-color: var(--Purple);
 	color: azure;
 	font-size: 20px;
+	font-family: "Noto Serif", serif;
+	width: 300px;
 }
+
+#searchButton {
+	width: 400px;
+}
+
 #name {
 	text-align: center;
 }
@@ -78,13 +92,8 @@ form {
 
 /* container for movie search results */
 .resultContainer {
-	margin-bottom: 40px;
+	margin-bottom: 100px;
 	margin-top: 40px;
-}
-
-/* movie posters */
-.moviePoster img {
-	border: 4px, solid --Red;
 }
 
 /* movie titles */
@@ -107,16 +116,24 @@ li.rated {
 	background-color: #212121;
 }
 
+.social_icon {
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+}
+
 /* media queries */
 @media (min-width: 800px) {
 	.resultContainer {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		margin-left: 120px;
+		display: flex;
+		justify-content: center;
 	}
 	.movieDetails {
 		margin: 30px;
 		text-align: center;
+		width: 500px;
 	}
 }
 @media (max-width: 800px) {
@@ -125,5 +142,9 @@ li.rated {
 	}
 	.movieDetails {
 		margin: 30px;
+	}
+	.searchButton {
+		display: flex;
+		justify-content: center;
 	}
 }
