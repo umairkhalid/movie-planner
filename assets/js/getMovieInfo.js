@@ -49,10 +49,9 @@ init();
 // TODO: a function to render recent searches. Run this function here, and also on startup.
 // TODO: This function will get list from local storage, delete all the children from the dropdown ul, and render the recent search results from scratch;
 function renderRecentSearches() {
-	console.log("reder")
 	var movieSearch = document.querySelector("#movieList");
 	var movieList = JSON.parse(localStorage.getItem("movieList")) || [];
-	console.log(movieList);
+
 	
 
 	movieSearch.innerHTML = "";
@@ -76,7 +75,6 @@ function renderRecentSearches() {
 }
 
 recentSearchBtn.addEventListener("click",function(){
-	console.log("hello world")
 	renderRecentSearches();
 }) 
 	
@@ -109,7 +107,6 @@ function callOMDB() {
 		})
 
 		.then(function (data1) {
-			// console.log(data1);
 
 			// clear metadata stack
 			clearMovieInfo();
@@ -141,9 +138,7 @@ function callOMDB() {
 			}
 		})
 		.then(() => {
-			console.log("Rendering function:");
 			setTimeout(renderFunction, 2000);
-			console.log("Adding button listeners:");
 			setTimeout(addListeners, 2000);
 			// console.log('Rendering video:');
 			// setTimeout(dummyRender, 2000);

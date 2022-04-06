@@ -51,12 +51,7 @@ function addListeners() {
 			// var details = event.target.parentElement.children[1];
 			var title = event.target.parentElement.querySelector('.title').textContent;
 			var year = event.target.parentElement.querySelector('.year').textContent.split('Year: ')[1];
-			console.log(`The event.target is event.target`, event.target);
-			console.log(`The event.target.parentElement is`, event.target.parentElement);
-
-			console.log(`The clicked title is ${title} and the clicked year is ${year}`);
 			updateTrailerID(title, year);
-			console.log('Now rendering function:');
 		});
 	});
 }
