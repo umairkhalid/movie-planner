@@ -59,7 +59,7 @@ function renderRecentSearches() {
 		var movieName = movieList[i].title;
 
 		var li = document.createElement("li");
-		li.textContent = movieName
+		li.textContent = movieName;
 
 		movieSearch.appendChild(li);
 	}
