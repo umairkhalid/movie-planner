@@ -64,6 +64,15 @@ function renderRecentSearches() {
 
 		movieSearch.appendChild(li);
 	}
+
+	// add listeners to searches so they will performSearch on click
+	var listItems = document.querySelectorAll('#movieList li');
+	listItems.forEach((listItem) => {
+		listItem.addEventListener('click', () => {
+			inputEl.value = listItem.textContent;
+			performSearch();
+		});
+	});
 }
 
 recentSearchBtn.addEventListener("click",function(){
