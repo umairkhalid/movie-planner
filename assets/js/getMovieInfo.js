@@ -196,7 +196,8 @@ function renderFunction() {
 
 // Clear metadata stack
 function clearMovieInfo() {
-	while (posters.pop()) while (titles.pop());
+	while (posters.pop());
+	while (titles.pop());
 	while (years.pop());
 	while (ratings.pop());
 	while (esrbs.pop());
