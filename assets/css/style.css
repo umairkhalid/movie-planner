@@ -25,6 +25,10 @@ form {
 	justify-content: center;
 }
 
+header {
+	padding: 40px;
+}
+
 .search.content {
 	text-align: center;
 }
@@ -32,14 +36,16 @@ form {
 .search-area {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 /*search button*/
 #searchBtn {
 	background-color: var(--Purple);
 	color: azure;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: "Noto Serif", serif;
+	border-radius: 10px;
 }
 
 /* the input element for the search query */
@@ -48,13 +54,18 @@ form {
 	justify-content: center;
 	background-color: var(--Purple);
 	color: azure;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: "Noto Serif", serif;
 	width: 300px;
+	border-radius: 10px;
 }
 
 #searchButton {
-	width: 400px;
+	width: 300px;
+	border-radius: 10px;
+	font-size: 15px;
+	height: 45px;
+	padding-top: 4px;
 }
 
 #name {
@@ -99,6 +110,7 @@ form {
 /* movie titles */
 .title {
 	color: var(--Red);
+	font-size: 35px;
 }
 
 /* movie years */
@@ -109,11 +121,17 @@ li.year {
 /* movie ratings */
 li.rated {
 	background-color: var(--Purple);
+	padding: 5px;
 }
 
 /* movie genres */
 .genre {
 	background-color: #212121;
+	padding: 5px;
+}
+
+.btn {
+	font-family: "Noto Serif", serif;
 }
 
 .social_icon {
@@ -143,8 +161,13 @@ li.rated {
 	.movieDetails {
 		margin: 30px;
 	}
-	.searchButton {
+	.search-area {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	#searchButton {
+		margin-right: 100px;
+		margin-bottom: 20px;
 	}
 }
