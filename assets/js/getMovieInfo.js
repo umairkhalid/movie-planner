@@ -15,6 +15,7 @@ Copyright 2022 MOOVEE Team
  WHEN they click on a list item
  THEN the search bar will show the list item, and a search will be run automatically
  */
+
 // handle for container to hold results 
 const resultGrid = document.getElementById("resultGrid");
 
@@ -164,8 +165,7 @@ function callOMDB() {
 		.then(() => {
 			setTimeout(renderFunction, 2000);
 			setTimeout(addListeners, 2000);
-			// setTimeout(dummyRender, 2000);
-		}); // I have allowed 1 second of thinking time for the computer
+		});
 }
 // function to render the metadata to the page
 function renderFunction() {
