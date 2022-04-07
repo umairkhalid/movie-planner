@@ -124,30 +124,38 @@ var genres = [];
 var actors = [];
 var plots = [];
 var ratings = [];
+var imdb1 = []; // hash for first fetch
+var imdb2 = []; // hash for second fetch
 // function that calls OMDB to get metadata of a movie, given a query string
 // function also delegates a render function for the metadata
 function callOMDB() {
+	// clear metadata stack
+	clearMovieInfo();
+
 	fetch("https://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&s=" + headers.s + "&page=1")
 		.then(function (generalSearchResult) {
 			return generalSearchResult.json();
 		})
 
 		.then(function (data1) {
-			// clear metadata stack
-			clearMovieInfo();
-
 			// for each movie search result
 			for (i = 0; i < data1.Search.length; i++) {
-				// push the general metadata
-				posters.push(data1.Search[i].Poster);
-				titles.push(data1.Search[i].Title);
-				years.push(data1.Search[i].Year);
+				// hash of order that we want the results to appear in
+				imdb1.push(data1.Search[i].imdbID);
 
 				fetch("https://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&i=" + data1.Search[i].imdbID)
 					.then(function (specificSearchResult) {
 						return specificSearchResult.json();
 					})
 					.then((data2) => {
+						// push the general metadata
+						if (data2.Poster === "N/A") {
+							posters.push('/assets/js/images/noposter.png')
+						} else {
+							posters.push(data2.Poster);
+						}
+						titles.push(data2.Title);
+						years.push(data2.Year);
 						// push the specific metadata
 						var rottenTomatoesRating = data2.Ratings.filter((movieRating) => movieRating.Source === "Rotten Tomatoes");
 						if (rottenTomatoesRating.length === 0) {
@@ -159,14 +167,42 @@ function callOMDB() {
 						genres.push(data2.Genre);
 						actors.push(data2.Actors);
 						plots.push(data2.Plot);
+						// hash of order that has been synchronously returned. Need to sort the data back to imdb1
+						imdb2.push(data2.imdbID);
 					});
 			}
 		})
 		.then(() => {
+			setTimeout(sortMetadata, 2000);
 			setTimeout(renderFunction, 2000);
 			setTimeout(addListeners, 2000);
 		});
 }
+// function to sort metadata
+function sortMetadata() {
+	// bubble sort
+	for (var i = 0; i < imdb1.length; i++) {
+		var j = imdb2.indexOf(imdb1[i]);
+		if (i != j) {
+			swap(imdb2, i, j);
+			swap(posters, i, j);
+			swap(titles, i, j);
+			swap(years, i, j);
+			swap(esrbs, i, j);
+			swap(genres, i, j);
+			swap(actors, i, j);
+			swap(plots, i, j);
+			swap(ratings, i, j);
+		}
+	}
+}
+// swap for bubble sort
+function swap(arr, i, j) {
+	temp = arr[i];
+	arr[i] = arr[j];
+	arr[j] = temp;
+}
+
 // function to render the metadata to the page
 function renderFunction() {
 	// clear the result container before rendering
@@ -196,11 +232,14 @@ function renderFunction() {
 
 // Clear metadata stack
 function clearMovieInfo() {
-	while (posters.pop()) while (titles.pop());
-	while (years.pop());
-	while (ratings.pop());
-	while (esrbs.pop());
-	while (genres.pop());
-	while (actors.pop());
-	while (plots.pop());
+	posters.length = 0;
+	titles.length = 0;
+	years.length = 0;
+	ratings.length = 0;
+	esrbs.length = 0;
+	genres.length = 0;
+	actors.length = 0;
+	plots.length = 0;
+	imdb1.length = 0;
+	imdb2.length = 0;
 }
