@@ -150,7 +150,7 @@ function callOMDB() {
 					.then((data2) => {
 						// push the general metadata
 						if (data2.Poster === "N/A") {
-							posters.push('/assets/js/images/noposter.png')
+							posters.push('../assets/js/images/noposter.png')
 						} else {
 							posters.push(data2.Poster);
 						}
