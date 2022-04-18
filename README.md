@@ -70,6 +70,13 @@ To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-plan
 
 ## Credits
 
+| Contributors                             | Roles                       | Tasks                    |
+| ---------------------------------------- | --------------------------- | ------------------------ |
+| Umair Khalid tyfoniacrage.x.au@gmail.com | Project Manager / Developer | Rendering, Design        |
+| Elsie Lawrie elsiemaylawrie1@gmail.com   | Developer                   | Rendering, Design        |
+| Xuan Huy Bui huybuixuan87@gmail.com      | Developer                   | Rendering, Local Storage |
+| Leo Wong leoelicos@gmail.com             | Developer                   | APIs                     |
+
 -  API Guides
    -  [YouTube Video: OMDB API Project](https://www.youtube.com/watch?v=0PNYQFaht8c)
    -  [YouTube Video: OMDB API Movie Search App](https://www.youtube.com/watch?v=1VjdxCTBfUI)
@@ -78,6 +85,6 @@ To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-plan
 
 ## License
 
-&copy; Umair Khalid tyfoniacrage.x.au@gmail.com, Elsie Lawrie elsiemaylawrie1@gmail.com, Xuan Huy Bui huybuixuan87@gmail.com, Leo Wong leoelicos@gmail.com. Licensed under the [MIT License](./LICENSE).
+Licensed under the [MIT License](./LICENSE).
 
 ---
