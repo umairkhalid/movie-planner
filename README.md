@@ -38,7 +38,6 @@ To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-plan
 
 ![MOOVEE Search Result](./assets/images/moovee-search-result-wide.jpg)
 
-
 ### Screenshot of MOOVEE with Recent Searches
 
 ![MOOVEE Recent Searches](./assets/images/moovee-recent-searches.jpg)
@@ -79,6 +78,6 @@ To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-plan
 
 ## License
 
-&copy; Umair Khalid, Elsie Lawrie, Xuan Huy Bui, Leo Wong. Licensed under the [MIT License](./LICENSE).
+&copy; Umair Khalid tyfoniacrage.x.au@gmail.com, Elsie Lawrie elsiemaylawrie1@gmail.com, Xuan Huy Bui huybuixuan87@gmail.com, Leo Wong leoelicos@gmail.com. Licensed under the [MIT License](./LICENSE).
 
 ---
