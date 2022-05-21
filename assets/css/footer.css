@@ -7,157 +7,153 @@ Copyright MOOVEE Team 2022
 /* classes */
 
 /* container for all of the social icon containers  */
-.social_icon {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    text-align: center;
-    background-color: none;
+.social-icon {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	text-align: center;
+	background-color: none;
 }
 
 /* social icon containers */
-.social_icon div{
-    position: relative;
-    background-color:none;
-    size:10px;
-    margin: 1px;
-    padding: 1px;
-    font-size: 20px;
+.social-icon div {
+	position: relative;
+	background-color: none;
+	size: 10px;
+	margin: 1px;
+	padding: 1px;
+	font-size: 20px;
 }
 
 /* highlight social icons on hover */
 .facebook:hover {
-    background-color: blue;
+	background-color: blue;
 }
 
 .instagram:hover {
-    background-color:bisque;
+	background-color: bisque;
 }
 
 .youtube:hover {
-    background-color:red;
+	background-color: red;
 }
 
-.printerest:hover {
-    background-color:red;
+.pinterest:hover {
+	background-color: red;
 }
 
 .twitter:hover {
-    background-color:blue;
+	background-color: blue;
 }
 
 /* 4 icons, so size them evenly */
-.social_icon > div > a > img {
-    width: 25%;
+.social-icon > div > a > img {
+	width: 25%;
 }
 
 /* styling for copyright text */
 .copy {
-    text-align: center;
-    color: red;
+	text-align: center;
+	color: red;
 }
 
 /* media queries for responsiveness */
 
-@media only screen and (min-width:650px) and (max-width: 992px) {
+@media only screen and (min-width: 650px) and (max-width: 992px) {
+	.social-icon {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		text-align: center;
+		background-color: none;
+	}
+	.social-icon div {
+		position: relative;
+		background-color: none;
+		size: 10px;
+		margin: 1px;
+		padding: 1px;
+		font-size: 20px;
+	}
 
-    .social_icon {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        text-align: center;
-        background-color: none;
-    }
-    .social_icon div{
-        position: relative;
-        background-color:none;
-        size:10px;
-        margin: 1px;
-        padding: 1px;
-        font-size: 20px;
-    }
-    
-    .facebook:hover {
-        background-color: blue;
-    }
-    
-    .instagram:hover {
-        background-color:bisque;
-    }
-    
-    .youtube:hover {
-        background-color:red;
-    }
-    
-    .printerest:hover {
-        background-color:red;
-    }
-    
-    .twitter:hover {
-        background-color:blue;
-    }
-    
-    .social_icon > div > a > img {
-        width: 25%;
-    }
-    
-    .copy {
-        text-align: center;
-        color: red;
-    }
-    
+	.facebook:hover {
+		background-color: blue;
+	}
+
+	.instagram:hover {
+		background-color: bisque;
+	}
+
+	.youtube:hover {
+		background-color: red;
+	}
+
+	.pinterest:hover {
+		background-color: red;
+	}
+
+	.twitter:hover {
+		background-color: blue;
+	}
+
+	.social-icon > div > a > img {
+		width: 25%;
+	}
+
+	.copy {
+		text-align: center;
+		color: red;
+	}
 }
 
-@media only screen and (max-width:650px) {
+@media only screen and (max-width: 650px) {
+	footer {
+		display: flex;
+		flex-direction: column;
+	}
 
-    footer {
-        display:flex;
-        flex-direction: column;
-    }
+	.social-icon {
+		display: flex;
+		flex-direction: row;
+	}
+	.social-icon div a {
+		background-color: none;
+		size: 10px;
+		margin: 1px;
+		padding: 1px;
+		font-size: 20px;
+		align-items: center;
+	}
 
-    .social_icon {
-        display: flex;
-        flex-direction: row;
-    }
-    .social_icon div a {
-        background-color:none;
-        size:10px;
-        margin: 1px;
-        padding: 1px;
-        font-size: 20px;
-        align-items: center;
-    }
-    
-    .facebook:hover {
-        background-color: blue;
-    }
-    
-    .instagram:hover {
-        background-color:bisque;
-    }
-    
-    .youtube:hover {
-        background-color:red;
-    }
-    
-    .printerest:hover {
-        background-color:red;
-    }
-    
-    .twitter:hover {
-        background-color:blue;
-    }
-    
-    .social_icon > div > a > img {
-        width: 80%;
-        align-items: center;
-    }
-    
-    .copy {
-        align-items: center;
-        text-align: center;
-        color: black;
-        font-size: 15px;
-    }
+	.facebook:hover {
+		background-color: blue;
+	}
 
+	.instagram:hover {
+		background-color: bisque;
+	}
+
+	.youtube:hover {
+		background-color: red;
+	}
+
+	.pinterest:hover {
+		background-color: red;
+	}
+
+	.twitter:hover {
+		background-color: blue;
+	}
+
+	.social-icon > div > a > img {
+		width: 80%;
+		align-items: center;
+	}
+
+	.copy {
+		align-items: center;
+		text-align: center;
+		color: black;
+		font-size: 15px;
+	}
 }
