@@ -73,12 +73,20 @@ header {
 }
 
 /* modal popup */
+.modal {
+	overflow: visible;
+	left: 50% !important;
+	top: 50% !important;
+	transform: translateX(-50%) translateY(-50%) !important;
+}
 /* footer */
 .modal-content {
 	padding: 0 !important;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+	height: calc(100vh - 56px) !important;
 }
 
 /* loading animation */
@@ -90,7 +98,11 @@ header {
 }
 
 .modal-footer {
+	position: absolute !important;
 	background-color: transparent !important;
+	bottom: -56px !important;
+	right: 0 !important;
+	padding-right: 0 !important;
 }
 
 /* button to trigger recent searches */
