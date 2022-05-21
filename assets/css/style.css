@@ -11,7 +11,7 @@ Copyright MOOVEE Team 2022
 * {
 	--Blue: #0d278a;
 	--Purple: #7d2aac;
-	font-family: "Noto Serif", serif;
+	font-family: 'Noto Serif', serif;
 }
 /*These are the wrapper/body container properties*/
 body {
@@ -40,27 +40,27 @@ header {
 }
 
 /*search button*/
-#searchBtn {
+#search-button {
 	background-color: var(--Purple);
 	color: azure;
 	font-size: 15px;
-	font-family: "Noto Serif", serif;
+	font-family: 'Noto Serif', serif;
 	border-radius: 10px;
 }
 
 /* the input element for the search query */
-#searchBox {
+#search-box {
 	display: flex;
 	justify-content: center;
 	background-color: var(--Purple);
 	color: azure;
 	font-size: 15px;
-	font-family: "Noto Serif", serif;
+	font-family: 'Noto Serif', serif;
 	width: 300px;
 	border-radius: 10px;
 }
 
-#searchButton {
+#search-button {
 	width: 300px;
 	border-radius: 10px;
 	font-size: 15px;
@@ -102,7 +102,7 @@ header {
 }
 
 /* container for movie search results */
-.resultContainer {
+.result-container {
 	margin-bottom: 100px;
 	margin-top: 40px;
 }
@@ -131,10 +131,10 @@ li.rated {
 }
 
 .btn {
-	font-family: "Noto Serif", serif;
+	font-family: 'Noto Serif', serif;
 }
 
-.social_icon {
+.social-icon {
 	margin: 20px;
 	display: flex;
 	justify-content: center;
@@ -142,23 +142,23 @@ li.rated {
 
 /* media queries */
 @media (min-width: 800px) {
-	.resultContainer {
+	.result-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		display: flex;
 		justify-content: center;
 	}
-	.movieDetails {
+	.movie-details {
 		margin: 30px;
 		text-align: center;
 		width: 500px;
 	}
 }
 @media (max-width: 800px) {
-	.resultContainer {
+	.result-container {
 		text-align: center;
 	}
-	.movieDetails {
+	.movie-details {
 		margin: 30px;
 	}
 	.search-area {
@@ -166,7 +166,7 @@ li.rated {
 		flex-direction: column;
 		flex-wrap: wrap;
 	}
-	#searchButton {
+	#search-button {
 		margin-right: 100px;
 		margin-bottom: 20px;
 	}
