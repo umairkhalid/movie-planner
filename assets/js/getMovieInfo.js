@@ -137,38 +137,40 @@ function callOMDB() {
 		})
 
 		.then(function (data1) {
-			// for each movie search result
-			for (i = 0; i < data1.Search.length; i++) {
-				// hash of order that we want the results to appear in
-				imdb1.push(data1.Search[i].imdbID);
+			if (data1.Search) {
+				// for each movie search result
+				for (i = 0; i < data1.Search.length; i++) {
+					// hash of order that we want the results to appear in
+					imdb1.push(data1.Search[i].imdbID);
 
-				fetch('https://www.omdbapi.com/?' + 'apikey=' + headers.apikey + '&type=' + headers.type + '&i=' + data1.Search[i].imdbID)
-					.then(function (specificSearchResult) {
-						return specificSearchResult.json();
-					})
-					.then((data2) => {
-						// push the general metadata
-						if (data2.Poster === 'N/A') {
-							posters.push('./assets/images/noposter.png');
-						} else {
-							posters.push(data2.Poster);
-						}
-						titles.push(data2.Title);
-						years.push(data2.Year);
-						// push the specific metadata
-						var rottenTomatoesRating = data2.Ratings.filter((movieRating) => movieRating.Source === 'Rotten Tomatoes');
-						if (rottenTomatoesRating.length === 0) {
-							ratings.push(data2.imdbRating + ' (imdb)');
-						} else {
-							ratings.push(rottenTomatoesRating[0].Value + ' (Rotten Tomatoes)');
-						}
-						esrbs.push(data2.Rated);
-						genres.push(data2.Genre);
-						actors.push(data2.Actors);
-						plots.push(data2.Plot);
-						// hash of order that has been synchronously returned. Need to sort the data back to imdb1
-						imdb2.push(data2.imdbID);
-					});
+					fetch('https://www.omdbapi.com/?' + 'apikey=' + headers.apikey + '&type=' + headers.type + '&i=' + data1.Search[i].imdbID)
+						.then(function (specificSearchResult) {
+							return specificSearchResult.json();
+						})
+						.then((data2) => {
+							// push the general metadata
+							if (data2.Poster === 'N/A') {
+								posters.push('./assets/images/noposter.png');
+							} else {
+								posters.push(data2.Poster);
+							}
+							titles.push(data2.Title);
+							years.push(data2.Year);
+							// push the specific metadata
+							var rottenTomatoesRating = data2.Ratings.filter((movieRating) => movieRating.Source === 'Rotten Tomatoes');
+							if (rottenTomatoesRating.length === 0) {
+								ratings.push(data2.imdbRating + ' (imdb)');
+							} else {
+								ratings.push(rottenTomatoesRating[0].Value + ' (Rotten Tomatoes)');
+							}
+							esrbs.push(data2.Rated);
+							genres.push(data2.Genre);
+							actors.push(data2.Actors);
+							plots.push(data2.Plot);
+							// hash of order that has been synchronously returned. Need to sort the data back to imdb1
+							imdb2.push(data2.imdbID);
+						});
+				}
 			}
 		})
 		.then(() => {
@@ -206,6 +208,13 @@ function swap(arr, i, j) {
 function renderFunction() {
 	// clear the result container before rendering
 	resultGrid.innerHTML = '';
+	// check if length is zero
+	if (!posters.length) {
+		resultGrid.innerHTML += `<div class= "result-container">No movies found 🤔</div>
+
+		`;
+		return;
+	}
 	// loop through the length of the movies returned from OMDB search
 	for (var i = 0; i < posters.length; i++) {
 		resultGrid.innerHTML += `
