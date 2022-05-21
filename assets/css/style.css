@@ -73,19 +73,36 @@ header {
 }
 
 /* modal popup */
+.modal {
+	overflow: visible;
+	left: 50% !important;
+	top: 50% !important;
+	transform: translateX(-50%) translateY(-50%) !important;
+}
 /* footer */
-.modal.modal-fixed-footer .modal-content {
-	height: calc(100% - -10px);
-	overflow: hidden;
+.modal-content {
+	padding: 0 !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: calc(100vh - 56px) !important;
 }
 
-/* container for iframe */
-.modal .modal-content {
-	padding: 0;
+/* loading animation */
+.modal-content img {
+	object-fit: cover;
+	object-position: center;
+	width: 50px;
+	height: 50px;
 }
 
-.preloader-wrapper {
-	margin-top: 10rem;
+.modal-footer {
+	position: absolute !important;
+	background-color: transparent !important;
+	bottom: -56px !important;
+	right: 0 !important;
+	padding-right: 0 !important;
 }
 
 /* button to trigger recent searches */
