@@ -21,11 +21,11 @@ var trailerURL = [];
 
 // search using YouTube Data API
 function showTrailer(title, year) {
-	// headers used to search 
+	// headers used to search
 	var request = gapi.client.youtube.search.list({
 		part: 'snippet',
 		q: title + ' ' + year + ' trailer',
-		maxResults: 1,
+		maxResults: 1
 	});
 	// gapi's version of fetch
 	request.execute(function (response) {
@@ -45,7 +45,6 @@ function onYouTubeApiLoad() {
 
 // This renders the iframe with the trailer inside
 function dummyRender() {
-
 	// grab the movie content area inside the modal
 	var movieEl = document.querySelector('.modal-content');
 	// clear the iframe child

@@ -11,11 +11,10 @@ Copyright 2022 MOOVEE Team
 */
 
 // function to load event listeners to the dropdown history button, and also to toggle the popup modal
-// both of these UI elements use the Materialize framework: 
+// both of these UI elements use the Materialize framework:
 // Buttons: https://materializecss.com/buttons.html
 // Modal: https://materializecss.com/modals.html
 $(document).ready(function () {
-
 	var elem = $('.modal');
 	var savedSearches = $('.dropdown-trigger');
 
@@ -26,12 +25,12 @@ $(document).ready(function () {
 		opacity: 0.9,
 		inDuration: 500,
 		outDuration: 500,
-		onCloseEnd: clearTrailer,
+		onCloseEnd: clearTrailer
 	});
 
 	M.Dropdown.init(savedSearches, {
 		inDuration: 500,
-		coverTrigger: false,
+		coverTrigger: false
 	});
 });
 
@@ -42,7 +41,9 @@ function clearTrailer() {
 	// clear trailer from iframe
 	var movieEl = document.querySelector('.modal-content');
 	// clear the iframe from modal content area
-	movieEl.innerHTML = '';
+
+	// add the spinner
+	movieEl.innerHTML = '<div class="progress"><div class="indeterminate"></div></div>';
 }
 
 // add event listeners to all buttons
@@ -74,4 +75,3 @@ function updateTrailerID(title, year) {
 		}
 	}, 500);
 }
-
