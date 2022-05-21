@@ -16,23 +16,23 @@ Copyright 2022 MOOVEE Team
  THEN the search bar will show the list item, and a search will be run automatically
  */
 
-// handle for container to hold results 
-const resultGrid = document.getElementById("resultGrid");
+// handle for container to hold results
+const resultGrid = document.getElementById('resultGrid');
 
 // handle for search button
-var recentSearchBtn = document.getElementById("searchButton")
+var recentSearchButton = document.getElementById('search-button');
 
 // user can search by either clicking the submit button (magnifying glass)
-var buttonEl = document.getElementById("searchBtn");
-buttonEl.addEventListener("click", (e) => {
+var buttonEl = document.getElementById('search-button');
+buttonEl.addEventListener('click', (e) => {
 	e.preventDefault();
 	performSearch();
 });
 
 // user can also search by typing enter button while inside the search field
-var inputEl = document.getElementById("searchBox");
-inputEl.addEventListener("keypress", (e) => {
-	if (e.key === "Enter") {
+var inputEl = document.getElementById('search-box');
+inputEl.addEventListener('keypress', (e) => {
+	if (e.key === 'Enter') {
 		e.preventDefault();
 		performSearch();
 	}
@@ -41,13 +41,13 @@ inputEl.addEventListener("keypress", (e) => {
 // function to search for movies
 function performSearch() {
 	// get localStorage JSON object and parse it to an array
-	var movieHistory = JSON.parse(localStorage.getItem("movieList")) || [];
+	var movieHistory = JSON.parse(localStorage.getItem('movieList')) || [];
 
 	// set localStorage for the value inside search box
 	var movie = { title: inputEl.value };
 	movieHistory.push(movie);
 
-	localStorage.setItem("movieList", JSON.stringify(movieHistory));
+	localStorage.setItem('movieList', JSON.stringify(movieHistory));
 
 	// render list from local storage to the page
 	renderRecentSearches();
@@ -70,7 +70,6 @@ init();
 // function to render recent searches. Run this function when button is pressed, and also on startup.
 // this function will get list from local storage, delete all the children from the dropdown ul, and render the recent search results from scratch;
 function renderRecentSearches() {
-
 	// grab the container for the dropdown list of local history
 	var movieSearch = document.querySelector('#movieList');
 	// grab the local history and parse it into an array
@@ -90,9 +89,9 @@ function renderRecentSearches() {
 	}
 
 	// add listeners to searches so they will performSearch on click
-	var listItems = document.querySelectorAll("#movieList li");
+	var listItems = document.querySelectorAll('#movieList li');
 	listItems.forEach((listItem) => {
-		listItem.addEventListener("click", () => {
+		listItem.addEventListener('click', () => {
 			inputEl.value = listItem.textContent;
 			performSearch();
 		});
@@ -100,7 +99,7 @@ function renderRecentSearches() {
 }
 
 // add a listener on startup to render recent searches
-recentSearchBtn.addEventListener("click",function(){
+recentSearchButton.addEventListener('click', function () {
 	renderRecentSearches();
 });
 
@@ -109,9 +108,9 @@ function updateQueryString() {
 	headers.s = inputEl.value;
 }
 var headers = {
-	apikey: "630b3ac4",
-	type: "movie",
-	t: "titanic",
+	apikey: '630b3ac4',
+	type: 'movie',
+	t: 'titanic'
 };
 
 var i;
@@ -132,7 +131,7 @@ function callOMDB() {
 	// clear metadata stack
 	clearMovieInfo();
 
-	fetch("https://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&s=" + headers.s + "&page=1")
+	fetch('https://www.omdbapi.com/?' + 'apikey=' + headers.apikey + '&type=' + headers.type + '&s=' + headers.s + '&page=1')
 		.then(function (generalSearchResult) {
 			return generalSearchResult.json();
 		})
@@ -143,25 +142,25 @@ function callOMDB() {
 				// hash of order that we want the results to appear in
 				imdb1.push(data1.Search[i].imdbID);
 
-				fetch("https://www.omdbapi.com/?" + "apikey=" + headers.apikey + "&type=" + headers.type + "&i=" + data1.Search[i].imdbID)
+				fetch('https://www.omdbapi.com/?' + 'apikey=' + headers.apikey + '&type=' + headers.type + '&i=' + data1.Search[i].imdbID)
 					.then(function (specificSearchResult) {
 						return specificSearchResult.json();
 					})
 					.then((data2) => {
 						// push the general metadata
-						if (data2.Poster === "N/A") {
-							posters.push('./assets/images/noposter.png')
+						if (data2.Poster === 'N/A') {
+							posters.push('./assets/images/noposter.png');
 						} else {
 							posters.push(data2.Poster);
 						}
 						titles.push(data2.Title);
 						years.push(data2.Year);
 						// push the specific metadata
-						var rottenTomatoesRating = data2.Ratings.filter((movieRating) => movieRating.Source === "Rotten Tomatoes");
+						var rottenTomatoesRating = data2.Ratings.filter((movieRating) => movieRating.Source === 'Rotten Tomatoes');
 						if (rottenTomatoesRating.length === 0) {
-							ratings.push(data2.imdbRating + " (imdb)");
+							ratings.push(data2.imdbRating + ' (imdb)');
 						} else {
-							ratings.push(rottenTomatoesRating[0].Value + " (Rotten Tomatoes)");
+							ratings.push(rottenTomatoesRating[0].Value + ' (Rotten Tomatoes)');
 						}
 						esrbs.push(data2.Rated);
 						genres.push(data2.Genre);
@@ -206,14 +205,14 @@ function swap(arr, i, j) {
 // function to render the metadata to the page
 function renderFunction() {
 	// clear the result container before rendering
-	resultGrid.innerHTML = "";
+	resultGrid.innerHTML = '';
 	// loop through the length of the movies returned from OMDB search
 	for (var i = 0; i < posters.length; i++) {
 		resultGrid.innerHTML += `
-					<div class= "resultContainer">
+					<div class= "result-container">
 					<div class="moviePoster">
 					<img src = ${posters[i]}></div>
-					<div class="movieDetails">
+					<div class="movie-details">
 						<h3 class="title">${titles[i]}</h3>
 					<ul class="movieUL">
 						<li class="movieInfo"></li>
