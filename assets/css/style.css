@@ -6,12 +6,14 @@ Copyright MOOVEE Team 2022
 
 /*footer style*/
 @import url(./footer.css);
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /*These universal properties apply to the whole css*/
 * {
+	--primary: black;
 	--Blue: #0d278a;
 	--Purple: #7d2aac;
-	font-family: 'Noto Serif', serif;
+	--call-to-action: #ed7d31;
+	--moovee-font: 'Montserrat';
 }
 /*These are the wrapper/body container properties*/
 body {
@@ -29,10 +31,6 @@ header {
 	padding: 40px;
 }
 
-.search-content {
-	text-align: center;
-}
-
 .search-area {
 	display: flex;
 	justify-content: center;
@@ -40,32 +38,32 @@ header {
 }
 
 /*search button*/
-#search-button {
-	background-color: var(--Purple);
-	color: azure;
+.search-button {
+	color: var(--primary);
+	background-color: var(--call-to-action);
 	font-size: 15px;
-	font-family: 'Noto Serif', serif;
-	border-radius: 10px;
+	font-family: var(--moovee-font);
+	border-radius: 50%;
+	height: 45px;
+	padding-top: 4px;
+	cursor: pointer;
+}
+.search-button:hover {
+	cursor: pointer;
 }
 
 /* the input element for the search query */
-#search-box {
+.search-box {
 	display: flex;
 	justify-content: center;
-	background-color: var(--Purple);
-	color: azure;
+	background-color: rgba(255, 255, 255, 1);
+	color: black;
 	font-size: 15px;
 	font-family: 'Noto Serif', serif;
 	width: 300px;
-	border-radius: 10px;
-}
-
-#search-button {
-	width: 300px;
-	border-radius: 10px;
-	font-size: 15px;
-	height: 45px;
-	padding-top: 4px;
+	border-radius: 25px;
+	margin-right: 1px;
+	padding: 0 5px !important;
 }
 
 #name {
@@ -147,10 +145,6 @@ li.rated {
 	padding: 5px;
 }
 
-.btn {
-	font-family: 'Noto Serif', serif;
-}
-
 /* media queries */
 @media (min-width: 800px) {
 	.result-container {
@@ -177,7 +171,7 @@ li.rated {
 		flex-direction: column;
 		flex-wrap: wrap;
 	}
-	#search-button {
+	.search-button {
 		margin-right: 100px;
 		margin-bottom: 20px;
 	}
