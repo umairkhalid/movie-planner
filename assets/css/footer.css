@@ -8,152 +8,34 @@ Copyright MOOVEE Team 2022
 
 /* container for all of the social icon containers  */
 .social-icon {
-	display: flex;
-	flex-direction: row;
-	align-items: stretch;
 	text-align: center;
 	background-color: none;
 }
 
-/* social icon containers */
-.social-icon div {
-	position: relative;
-	background-color: none;
-	size: 10px;
-	margin: 1px;
-	padding: 1px;
-	font-size: 20px;
-}
-
-/* highlight social icons on hover */
-.facebook:hover {
-	background-color: blue;
-}
-
-.instagram:hover {
-	background-color: bisque;
-}
-
-.youtube:hover {
-	background-color: red;
-}
-
-.pinterest:hover {
-	background-color: red;
-}
-
-.twitter:hover {
-	background-color: blue;
-}
-
-/* 4 icons, so size them evenly */
-.social-icon > div > a > img {
-	width: 25%;
-}
-
-/* styling for copyright text */
-.copy {
+/* override font-awesome */
+.fa {
+	padding: 5px;
+	font-size: 30px;
+	width: 40px;
 	text-align: center;
-	color: red;
+	text-decoration: none;
+
+	border-radius: 50%;
 }
 
-/* media queries for responsiveness */
-
-@media only screen and (min-width: 650px) and (max-width: 992px) {
-	.social-icon {
-		display: flex;
-		flex-direction: row;
-		align-items: stretch;
-		text-align: center;
-		background-color: none;
-	}
-	.social-icon div {
-		position: relative;
-		background-color: none;
-		size: 10px;
-		margin: 1px;
-		padding: 1px;
-		font-size: 20px;
-	}
-
-	.facebook:hover {
-		background-color: blue;
-	}
-
-	.instagram:hover {
-		background-color: bisque;
-	}
-
-	.youtube:hover {
-		background-color: red;
-	}
-
-	.pinterest:hover {
-		background-color: red;
-	}
-
-	.twitter:hover {
-		background-color: blue;
-	}
-
-	.social-icon > div > a > img {
-		width: 25%;
-	}
-
-	.copy {
-		text-align: center;
-		color: red;
-	}
+/* hover effect slightly darken */
+.fa:hover {
+	opacity: 0.7;
 }
 
-@media only screen and (max-width: 650px) {
-	footer {
-		display: flex;
-		flex-direction: column;
-	}
+.fa-facebook,
+.fa-instagram,
+.fa-youtube {
+	color: black;
+	background-color: rgb(233, 142, 39);
+}
 
-	.social-icon {
-		display: flex;
-		flex-direction: row;
-	}
-	.social-icon div a {
-		background-color: none;
-		size: 10px;
-		margin: 1px;
-		padding: 1px;
-		font-size: 20px;
-		align-items: center;
-	}
-
-	.facebook:hover {
-		background-color: blue;
-	}
-
-	.instagram:hover {
-		background-color: bisque;
-	}
-
-	.youtube:hover {
-		background-color: red;
-	}
-
-	.pinterest:hover {
-		background-color: red;
-	}
-
-	.twitter:hover {
-		background-color: blue;
-	}
-
-	.social-icon > div > a > img {
-		width: 80%;
-		align-items: center;
-	}
-
-	.copy {
-		align-items: center;
-		text-align: center;
-		color: black;
-		font-size: 15px;
-	}
+.fa-youtube {
+	padding-right: 8px;
+	width: 44px !important;
 }
