@@ -59,7 +59,7 @@ https://user-images.githubusercontent.com/99461390/169696139-661dcf39-7ce9-4a30-
 ![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169696197-1fea68fe-5c4c-42c6-b435-920cff458492.jpg)
 
 #### Comparison with original
-![compare3](https://user-images.githubusercontent.com/99461390/169694085-f0c58477-4e69-438a-9829-41ab6af9f3fa.jpg)
+![compare3](https://user-images.githubusercontent.com/99461390/169696634-ec01ae1f-f4b7-4e0b-9e6a-77bd80a52921.jpg)
 
 ### Improvement of MOOVEE V2 Trailer
 ![MOOVEE V2 Trailer](https://user-images.githubusercontent.com/99461390/169693361-63557cab-69e3-4b0d-a266-af6726905178.jpg)
