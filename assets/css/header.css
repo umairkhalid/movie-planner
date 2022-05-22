@@ -1,25 +1,24 @@
 /* 
-header.css
-this document contains the css code to style the header in index.html 
-Copyright MOOVEE Team 2022
+ * MOOVEE
+ * header.css
+ * This document contains the css code to style the header of index.html 
+ * Copyright MOOVEE Team 2022 — Umair Khalid, Leo Wong, Elsie May, Xuan Huy Bui
 */
 
 /* Space for MOOVEE Logo */
 header {
-   width: 100%;
-   display: flex;
-   /* center the MOOVEE LOGO on the horizontal axis*/
-   align-items: center;
-   /* will center the MOOVEE LOGO on the vertical axis*/
-   justify-content: center;
+	width: 100%;
+	display: flex;
+	/* center the MOOVEE LOGO on the horizontal axis*/
+	align-items: center;
+	/* will center the MOOVEE LOGO on the vertical axis*/
+	justify-content: center;
 }
 
 /* MOOVEE LOGO */
 header img {
-   /* take up 50% of the horizontal space */
-   width: 50%;
-   /* ... but not too big. It's a square, so not bigger than 20% of the viewport height */
-   max-width:  20vh;
+	/* take up 50% of the horizontal space */
+	width: 50%;
+	/* ... but not too big. It's a square, so not bigger than 20% of the viewport height */
+	max-width: 20vh;
 }
-
-

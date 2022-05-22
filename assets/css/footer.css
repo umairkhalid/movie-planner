@@ -1,7 +1,8 @@
 /* 
-footer.css
-this document contains the css code to style the footer in index.html 
-Copyright MOOVEE Team 2022
+ * MOOVEE
+ * footer.css
+ * this document contains the css code to style the footer of index.html 
+ * Copyright MOOVEE Team 2022 — Umair Khalid, Leo Wong, Elsie May, Xuan Huy Bui
 */
 
 /* classes */
@@ -32,7 +33,7 @@ Copyright MOOVEE Team 2022
 .fa-instagram,
 .fa-youtube {
 	color: black;
-	background-color: rgb(233, 142, 39);
+	background-color: #ed7d31;
 }
 
 .fa-youtube {
