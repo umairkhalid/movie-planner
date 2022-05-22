@@ -35,7 +35,11 @@ Disclosure that this repo, `Moovee V2`, is essentially what I fixed and refactor
 
 ## Usage
 
-MOOVEE V2 is deployed: [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). 
+Deployed at [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). 
+
+### Video Demo
+
+https://user-images.githubusercontent.com/99461390/169695298-0f36e046-6554-497f-a73a-3a9fe4a5051a.mp4
 
 ## Screenshots
 
