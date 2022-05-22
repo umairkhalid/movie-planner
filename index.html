@@ -1,3 +1,13 @@
+<!-- 
+	
+	index.html
+
+	This file contains the only page for the Moovee app, which has a search button to render search results, and a modal that opens and closes when trailers are clicked from the sesarch results
+
+	Copyright 2022 Moovee Team
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,18 +27,17 @@
 		<link rel="stylesheet" href="./assets/css/header.css" />
 		<link rel="shortcut icon" href="./assets/images/mooveefavi.png" type="image/x-icon" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<!-- showTrailer.js -->
-		<script src="./assets/js/showTrailer.js"></script>
-		<!-- google api for showTrailer.js -->
+		<!-- fetchYouTube.js -->
+		<script src="./assets/js/fetchYouTube.js"></script>
+		<!-- google api for fetchYouTube.js -->
 		<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 	</head>
 
 	<body>
 		<div id="modal1" class="modal modal-fixed-footer open transparent">
 			<div class="modal-content">
-				<div class="progress">
-					<div class="indeterminate"></div>
-				</div>
+				<!-- loading animation while we wait for YouTube trailer -->
+				<div class="progress"><div class="indeterminate"></div></div>
 			</div>
 			<div class="modal-footer">
 				<a href="#!" class="modal-close waves-effect waves-light btn">Close</a>
@@ -43,7 +52,7 @@
 			<div class="search-area">
 				<form class="input-field col s6">
 					<input type="search" id="search-box" class="search-box" />
-					<label for="search-box">Search for Movie here..</label>
+					<label for="search-box" class="search-label">Any movie name…</label>
 					<button id="search-button" class="btn search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</form>
 				<div id="holdContainer">
@@ -66,8 +75,13 @@
 			</div>
 		</footer>
 
-		<script src="./assets/js/modalPop.js"></script>
-		<script src="./assets/js/showTrailer.js"></script>
-		<script src="./assets/js/getMovieInfo.js"></script>
+		<script src="./assets/js/renderModal.js"></script>
+		<script src="./assets/js/fetchYouTube.js"></script>
+		<script src="./assets/js/fetchOMDB.js"></script>
+		<script src="./assets/js/renderYouTube.js"></script>
+		<script src="./assets/js/renderOMDB.js"></script>
+		<script src="./assets/js/renderHistory.js"></script>
+		<script src="./assets/js/setHistory.js"></script>
+		<script src="./assets/js/index.js"></script>
 	</body>
 </html>
