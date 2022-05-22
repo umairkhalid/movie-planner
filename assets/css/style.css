@@ -151,12 +151,6 @@ li.rated {
 	font-family: 'Noto Serif', serif;
 }
 
-.social-icon {
-	margin: 20px;
-	display: flex;
-	justify-content: center;
-}
-
 /* media queries */
 @media (min-width: 800px) {
 	.result-container {
