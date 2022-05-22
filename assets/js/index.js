@@ -18,7 +18,7 @@ async function performSearch() {
 	setHistory(inputEl.value);
 
 	// loading animation during OMDB wait
-	resultGrid.innerHTML = `<div class="progress"><div class="indeterminate"></div></div>`;
+	resultGrid.innerHTML = '<div class="progress" style="width: 100vw"><div class="indeterminate"></div></div>';
 
 	// search OMDB with the query from the search box
 	const movies = await fetchOMDB(inputEl.value);
