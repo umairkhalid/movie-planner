@@ -1,12 +1,14 @@
 /* 
-style.css
-this document contains the css code to style index.html 
-Copyright MOOVEE Team 2022
+ * MOOVEE
+ * style.css
+ * this document contains the css code to style the body of index.html 
+ * Copyright MOOVEE Team 2022 — Umair Khalid, Leo Wong, Elsie May, Xuan Huy Bui
 */
 
 /*footer style*/
 @import url(./footer.css);
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 /*These universal properties apply to the whole css*/
 * {
 	--primary: black;
@@ -35,6 +37,15 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+}
+
+.search-label {
+	font-family: var(--moovee-font);
+	color: var(--call-to-action) !important;
+}
+.search-label.active {
+	transform: translateY(-16px) scale(0.8) !important;
 }
 
 /*search button*/
@@ -56,14 +67,21 @@ header {
 .search-box {
 	display: flex;
 	justify-content: center;
-	background-color: rgba(255, 255, 255, 1);
-	color: black;
 	font-size: 15px;
 	font-family: 'Noto Serif', serif;
 	width: 300px;
 	border-radius: 25px;
 	margin-right: 1px;
 	padding: 0 5px !important;
+	background-color: black !important;
+	color: white !important;
+	font-family: var(--moovee-font) !important;
+	border-bottom: 1px solid var(--call-to-action) !important;
+}
+
+.dropdown-trigger {
+	left: unset !important;
+	width: unset !important;
 }
 
 #name {
@@ -166,13 +184,9 @@ li.rated {
 	.movie-details {
 		margin: 30px;
 	}
-	.search-area {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
+
 	.search-button {
-		margin-right: 100px;
+		/* margin-right: 100px; */
 		margin-bottom: 20px;
 	}
 }
