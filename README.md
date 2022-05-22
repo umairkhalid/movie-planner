@@ -39,7 +39,7 @@ Deployed at [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/).
 
 ### Video Demo
 
-https://user-images.githubusercontent.com/99461390/169695298-0f36e046-6554-497f-a73a-3a9fe4a5051a.mp4
+https://user-images.githubusercontent.com/99461390/169696139-661dcf39-7ce9-4a30-8dfd-3d43883a0887.mp4
 
 ## Screenshots
 
@@ -56,7 +56,7 @@ https://user-images.githubusercontent.com/99461390/169695298-0f36e046-6554-497f-
 ![compare2](https://user-images.githubusercontent.com/99461390/169694084-e805a7da-8e8a-417e-b33a-209fc80296d5.jpg)
 
 ### Improvement of MOOVEE V2 Recent Searches
-![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169693965-bcfc6e6b-c12b-42bd-8450-46cbc0ffec04.jpg)
+![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169696197-1fea68fe-5c4c-42c6-b435-920cff458492.jpg)
 
 #### Comparison with original
 ![compare3](https://user-images.githubusercontent.com/99461390/169694085-f0c58477-4e69-438a-9829-41ab6af9f3fa.jpg)
@@ -66,6 +66,7 @@ https://user-images.githubusercontent.com/99461390/169695298-0f36e046-6554-497f-
 
 #### Comparison with original
 ![compare4](https://user-images.githubusercontent.com/99461390/169694090-1967d045-6dc5-4f22-bd1e-d966ed51ba4f.jpg)
+![compare5](https://user-images.githubusercontent.com/99461390/169696528-d17f1dab-d607-46ff-a319-c083c4975565.jpg)
 
 ## Documentation
 
