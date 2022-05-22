@@ -35,21 +35,33 @@ Disclosure that this repo, `Moovee V2`, is essentially what I fixed and refactor
 
 ## Usage
 
-MOOVEE V2 is deployed: [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). For the original, please see [MOOVEE](https://umairkhalid.github.io/movie-planner/).
+MOOVEE V2 is deployed: [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). 
 
 ## Screenshots
 
-### Screenshot of MOOVEE V2 Landing Page
+### Improvement of Landing Page
 ![MOOVEE V2 Landing Page](https://user-images.githubusercontent.com/99461390/169693289-90b3df7f-1817-4524-bc19-68e761230986.jpg)
 
-### Screenshot of MOOVEE V2 Search Result
+#### Comparison with original
+![compare1](https://user-images.githubusercontent.com/99461390/169694083-133d8082-99b5-4d2c-a62a-12c02b6e7125.jpg)
+
+### Improvement of MOOVEE V2 Search Result
 ![MOOVEE V2 Search Result](https://user-images.githubusercontent.com/99461390/169693393-d21ea44d-d5d3-42f2-a08b-74840135e199.jpg)
 
-### Screenshot of MOOVEE V2 Recent Searches
+#### Comparison with original
+![compare2](https://user-images.githubusercontent.com/99461390/169694084-e805a7da-8e8a-417e-b33a-209fc80296d5.jpg)
+
+### Improvement of MOOVEE V2 Recent Searches
 ![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169693965-bcfc6e6b-c12b-42bd-8450-46cbc0ffec04.jpg)
 
-### Screenshot of MOOVEE V2 Trailer
+#### Comparison with original
+![compare3](https://user-images.githubusercontent.com/99461390/169694085-f0c58477-4e69-438a-9829-41ab6af9f3fa.jpg)
+
+### Improvement of MOOVEE V2 Trailer
 ![MOOVEE V2 Trailer](https://user-images.githubusercontent.com/99461390/169693361-63557cab-69e3-4b0d-a266-af6726905178.jpg)
+
+#### Comparison with original
+![compare4](https://user-images.githubusercontent.com/99461390/169694090-1967d045-6dc5-4f22-bd1e-d966ed51ba4f.jpg)
 
 ## Documentation
 
