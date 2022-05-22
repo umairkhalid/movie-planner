@@ -32,14 +32,14 @@ async function renderOMDB(movieObjects) {
 	movieObjects.forEach(async (movie) => {
 		// deserialize metadata from each movie object
 		const { poster, title, year, esrb, genre, actors, plot, rating } = movie;
-
+		console.log(poster, title, year, esrb, genre, actors, plot, rating);
 		// container for everything for this movie
 		const resultContainer = make('div', 'result-container');
 
 		// add poster
 		const moviePosterContainer = make('div', 'moviePoster');
 		const moviePoster = make('img', 'movie-poster');
-		moviePoster.setAttribute('src', poster);
+		moviePoster.setAttribute('src', poster === 'N/A' ? 'assets/images/noposter.png' : poster);
 		moviePosterContainer.appendChild(moviePoster);
 		resultContainer.appendChild(moviePosterContainer);
 
