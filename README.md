@@ -46,7 +46,7 @@ MOOVEE V2 is deployed: [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). 
 ![MOOVEE V2 Search Result](https://user-images.githubusercontent.com/99461390/169693393-d21ea44d-d5d3-42f2-a08b-74840135e199.jpg)
 
 ### Screenshot of MOOVEE V2 Recent Searches
-![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169676254-8408079c-e24b-43da-ab14-674f35d16c35.jpg)
+![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169693965-bcfc6e6b-c12b-42bd-8450-46cbc0ffec04.jpg)
 
 ### Screenshot of MOOVEE V2 Trailer
 ![MOOVEE V2 Trailer](https://user-images.githubusercontent.com/99461390/169693361-63557cab-69e3-4b0d-a266-af6726905178.jpg)
