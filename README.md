@@ -1,14 +1,20 @@
-# MOOVEE
+# MOOVEE 2
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML](https://img.shields.io/badge/5-0?label=HTML&style=for-the-badge&labelColor=white&color=black) ![CSS3](https://img.shields.io/badge/3-0?label=CSS&style=for-the-badge&labelColor=white&color=black) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ![OMDB API](https://img.shields.io/badge/API-OMDB%20API-red.svg) ![OMDB API](https://img.shields.io/badge/API-YouTube%20Data%20API-red.svg)
 
 ## Description
 
-We made this app to allow users to select and watch trailers of movies that they like.
+This app to allow movie-watchers to select and watch movie trailers that they like.
 
-While making the app, we learned to collaborate, and how to work with APIs, working with design libraries (Materialize) and responsive design, GitHub Pull Requests and Projects, Merge Conflicts, the Command Line / Terminal, tickets and issues, DOM traversal and manipulation.
+While making the app, I made fetch calls to third-party APIs like `OMDB API` and `YouTube Data API`, worked with a framework `Materialize` and implemented and responsive design.
+
+We used GitHub Projects [here](https://github.com/umairkhalid/movie-planner/projects/1) to coordinate the teamwork, tickets and issues.
+
+Moovee 2 is revamped from a fork of the [original](https://github.com/umairkhalid/movie-planner). Here is a summary of the refactoring:
+
+-  refactored to use `async await` rather than `.then`, and also
 
 ### User Story
 
@@ -38,16 +44,13 @@ To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-plan
 
 ![MOOVEE Search Result](https://user-images.githubusercontent.com/99461390/169676246-29a50276-799f-4664-884c-be4451ef6ad7.jpg)
 
-
 ### Screenshot of MOOVEE with Recent Searches
 
 ![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169676254-8408079c-e24b-43da-ab14-674f35d16c35.jpg)
 
-
 ### Screenshot of MOOVEE with Modal Popup
 
 ![MOOVEE Modal Popup](https://user-images.githubusercontent.com/99461390/169676260-af4a5db9-c307-4273-8180-523208411bd2.jpg)
-
 
 ## Documentation
 
