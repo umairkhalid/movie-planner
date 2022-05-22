@@ -84,6 +84,31 @@ header {
 	width: unset !important;
 }
 
+.dropdown-content {
+	background-color: white !important;
+	height: unset !important;
+	border-radius: 10px;
+	padding: 10px;
+}
+.dropdown-content > li {
+	min-height: unset !important;
+	line-height: unset !important;
+	background-color: white !important;
+	font-family: var(--moovee-font);
+	color: black;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 10px !important;
+	text-align: center;
+}
+ul#movieList {
+	padding-left: 10px !important;
+}
+
+.dropdown-content > li:hover {
+	background-color: var(--call-to-action) !important;
+}
+
 #name {
 	text-align: center;
 }

@@ -12,10 +12,14 @@ function setHistory(movieName) {
 	const movieHistory = JSON.parse(localStorage.getItem('movieList')) || [];
 
 	// check if the title already exists in local storage
-	if (!movieHistory.find((movie) => movie.title === movieName)) {
-		//
-		// if not, then add the query to the list
-		movieHistory.push({ title: movieName });
+	const existsInStorage = movieHistory.find((movie) => movie.title === movieName);
+
+	// if not, then add the query to the list
+	if (!existsInStorage) movieHistory.push({ title: movieName });
+
+	// cap the maximum storage at 10 movies
+	while (movieHistory.length > 10) {
+		movieHistory.shift();
 	}
 
 	// push it back to localStorage

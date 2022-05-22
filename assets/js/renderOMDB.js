@@ -32,7 +32,7 @@ async function renderOMDB(movieObjects) {
 	movieObjects.forEach(async (movie) => {
 		// deserialize metadata from each movie object
 		const { poster, title, year, esrb, genre, actors, plot, rating } = movie;
-		console.log(poster, title, year, esrb, genre, actors, plot, rating);
+
 		// container for everything for this movie
 		const resultContainer = make('div', 'result-container');
 
