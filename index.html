@@ -6,87 +6,68 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 		</style>
 		<script src="https://kit.fontawesome.com/2c4df21959.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<link rel="stylesheet" href="./assets/css/footer.css" />
 		<link rel="stylesheet" href="./assets/css/header.css" />
-		<link rel="shortcut icon" href="./assets/images/mooveefavi.png" type="image/x-icon">
+		<link rel="shortcut icon" href="./assets/images/mooveefavi.png" type="image/x-icon" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!-- showTrailer.js -->
 		<script src="./assets/js/showTrailer.js"></script>
 		<!-- google api for showTrailer.js -->
 		<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 	</head>
-	<!--This is the title of the page-->
 
 	<body>
-
-		<!-- Modal Structure -->
 		<div id="modal1" class="modal modal-fixed-footer open transparent">
-
 			<div class="modal-content">
-				<div class="progress"><div class="indeterminate"></div></div>
-		  	</div>
-
-			<div class="modal-footer ">
+				<div class="progress">
+					<div class="indeterminate"></div>
+				</div>
+			</div>
+			<div class="modal-footer">
 				<a href="#!" class="modal-close waves-effect waves-light btn">Close</a>
 			</div>
-			
 		</div>
-		 
-<header>
-	<img src="./assets/moovee.png" alt="moovee logo" class="moo_jpg"></img></header>
 
-<!--Search section-->
-		<main class="search-content">
+		<header>
+			<img src="./assets/images/moovee.png" alt="moovee logo" class="moo_jpg" />
+		</header>
+
+		<main>
 			<div class="search-area">
 				<form class="input-field col s6">
-					<input type="search" id="search-box" class="validate">
-					<label for="search-box">Search for Movie here..</label></input>
-					<button id="search-button">SEARCH</button>
+					<input type="search" id="search-box" class="search-box" />
+					<label for="search-box">Search for Movie here..</label>
+					<button id="search-button" class="btn search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</form>
 				<div id="holdContainer">
-				<!-- Dropdown Trigger -->
-				<a id="search-button" class='dropdown-trigger btn grey darken-4' href='#' data-target='movieList'><i class="fa-solid fa-clock-rotate-left"></i> <i class="fas fa-caret-down"></i></a>
-
-				<!-- Dropdown Structure -->
-				<ul id='movieList' class='dropdown-content grey lighten-1'>
-				</ul>
+					<a id="history-button" class="dropdown-trigger btn search-button" href="#" data-target="movieList"> <i class="fa-solid fa-clock-rotate-left"></i> <i class="fas fa-caret-down"></i> </a>
+					<ul id="movieList" class="dropdown-content grey lighten-1"></ul>
+				</div>
 			</div>
-			
-			</div>
-            </form>
 			<section class="container">
 				<div class="result-container">
-					<div class="result-grid" id="resultGrid">
-
-						<!-- MOVIE RESULTS LOAD HERE -->
-					
-					</div>
+					<div class="result-grid" id="resultGrid"></div>
 				</div>
 			</section>
-
 		</main>
 
-		
-
-	<footer class="footer">
-		<div class="social-icon">
+		<footer class="footer">
+			<div class="social-icon">
 				<a href="https://www.facebook.com/MooVee-The-Movies-104712718873649/" class="fa fa-facebook"></a>
 				<a href="https://www.instagram.com" class="fa fa-instagram"></a>
 				<a href="https://www.youtube.com/c/marvel" class="fa fa-youtube"></a>
-        </div>
-	</footer>
+			</div>
+		</footer>
 
-</body>
-
-	<script src="./assets/js/modalPop.js"></script>
-	<script src="./assets/js/showTrailer.js" ></script>
-	<script src="./assets/js/getMovieInfo.js"></script>
-
+		<script src="./assets/js/modalPop.js"></script>
+		<script src="./assets/js/showTrailer.js"></script>
+		<script src="./assets/js/getMovieInfo.js"></script>
+	</body>
 </html>
