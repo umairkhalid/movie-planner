@@ -1,26 +1,14 @@
-/* 
-getMovieInfo.js
-This document contains the necessary elements to search for movies on OMDB and render them, and also render recent searches
-Copyright 2022 MOOVEE Team
-
- Acceptance criteria:
- GIVEN user wants to see 5 movie results, 
- WHEN they click Enter in the search box, 
- or WHEN they click the submit button,
- THEN an API call to OMDB will fetch search results and render them to the page
-
- GIVEN user wants to see a history of search results,
- WHEN they click the Recent Searches button,
- THEN a list of recent searches will be available
- WHEN they click on a list item
- THEN the search bar will show the list item, and a search will be run automatically
+/*
+ * getMovieInfo.js
+ * This document contains the necessary elements to search for movies on OMDB and render them, and also render recent searches
+ * Copyright 2022 MOOVEE Team
  */
 
 // handle for container to hold results
 const resultGrid = document.getElementById('resultGrid');
 
 // handle for search button
-var recentSearchButton = document.getElementById('search-button');
+var recentSearchButton = document.getElementById('history-button');
 
 // user can search by either clicking the submit button (magnifying glass)
 var buttonEl = document.getElementById('search-button');
