@@ -48,18 +48,18 @@ async function renderOMDB(movieObjects) {
 
 		// Detail 1
 		const movieTitle = make('h3', 'title');
-		movieTitle.innerText = title;
+		movieTitle.innerText = title === 'undefined' ? 'Moo! Try again' : title;
 		movieDetailsContainer.appendChild(movieTitle);
 
 		// Detail 2
 		const movieULEl = make('ul', 'movieUL');
 
 		const esrbEl = make('li', 'esrb');
-		esrbEl.innerHTML = '<b>Rated: </b>' + esrb;
+		esrbEl.innerHTML = '<b>Rated: </b>' + esrb === 'undefined' ? 'Moo! Try again' : esrb;
 		movieULEl.appendChild(esrbEl);
 
 		const yearEl = make('li', 'year');
-		yearEl.innerHTML = '<b>Year: </b>' + year;
+		yearEl.innerHTML = '<b>Year: </b>' + year === 'undefined' ? 'Moo! Try again' : year;
 		movieULEl.appendChild(yearEl);
 
 		const ratedEl = make('li', 'rated');
@@ -77,17 +77,17 @@ async function renderOMDB(movieObjects) {
 
 		// Detail 3
 		const movieGenre = make('p', 'genre');
-		movieGenre.innerHTML = '<b>Genre: </b>' + genre;
+		movieGenre.innerHTML = '<b>Genre: </b>' + genre === 'undefined' ? 'Moo! Try again' : genre;
 		movieDetailsContainer.appendChild(movieGenre);
 
 		// Detail 4
 		const movieActors = make('p', 'actors');
-		movieActors.innerHTML = '<b>Actors: </b>' + actors;
+		movieActors.innerHTML = '<b>Actors: </b>' + actors === 'undefined' ? 'Moo! Try again' : actors;
 		movieDetailsContainer.appendChild(movieActors);
 
 		// Detail 5
 		const moviePlot = make('p', 'plot');
-		moviePlot.innerHTML = '<b>Plot: </b>' + plot;
+		moviePlot.innerHTML = '<b>Plot: </b>' + plot === 'undefined' ? 'Moo! Try again' : plot;
 		movieDetailsContainer.appendChild(moviePlot);
 
 		// buttons listen for click to grab the title and year, and search YouTube for a trailer
