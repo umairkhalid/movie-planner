@@ -39,19 +39,17 @@ MOOVEE V2 is deployed: [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). 
 
 ## Screenshots
 
-### Screenshot of MOOVEE with Search Result
+### Screenshot of MOOVEE V2 Landing Page
+![MOOVEE V2 Landing Page](https://user-images.githubusercontent.com/99461390/169693289-90b3df7f-1817-4524-bc19-68e761230986.jpg)
 
-![MOOVEE Search Result](https://user-images.githubusercontent.com/99461390/169676236-fc0ed791-4806-43d2-ae49-cc6c62428951.jpg)
+### Screenshot of MOOVEE V2 Search Result
+![MOOVEE V2 Search Result](https://user-images.githubusercontent.com/99461390/169693393-d21ea44d-d5d3-42f2-a08b-74840135e199.jpg)
 
-![MOOVEE Search Result](https://user-images.githubusercontent.com/99461390/169676246-29a50276-799f-4664-884c-be4451ef6ad7.jpg)
-
-### Screenshot of MOOVEE with Recent Searches
-
+### Screenshot of MOOVEE V2 Recent Searches
 ![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169676254-8408079c-e24b-43da-ab14-674f35d16c35.jpg)
 
-### Screenshot of MOOVEE with Modal Popup
-
-![MOOVEE Modal Popup](https://user-images.githubusercontent.com/99461390/169676260-af4a5db9-c307-4273-8180-523208411bd2.jpg)
+### Screenshot of MOOVEE V2 Trailer
+![MOOVEE V2 Trailer](https://user-images.githubusercontent.com/99461390/169693361-63557cab-69e3-4b0d-a266-af6726905178.jpg)
 
 ## Documentation
 
