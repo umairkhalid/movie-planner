@@ -1,28 +1,29 @@
-# MOOVEE 2
+# MOOVEE V2
 
-![HTML](https://img.shields.io/badge/5-0?label=HTML&style=for-the-badge&labelColor=white&color=black) ![CSS3](https://img.shields.io/badge/3-0?label=CSS&style=for-the-badge&labelColor=white&color=black) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-![OMDB API](https://img.shields.io/badge/API-OMDB%20API-red.svg) ![OMDB API](https://img.shields.io/badge/API-YouTube%20Data%20API-red.svg)
+![OMDB](https://img.shields.io/badge/'17-0?label=OMDB%20API&style=for-the-badge&labelColor=white&color=black) ![YouTube Data Api](https://img.shields.io/badge/v3-0?label=YouTube%20Data%20API&style=for-the-badge&labelColor=white&color=black)
 
 ## Description
 
-This app to allow movie-watchers to select and watch movie trailers that they like.
+This app allows movie-watchers to select and watch movie trailers that they like.
 
-While making the app, I made fetch calls to third-party APIs like `OMDB API` and `YouTube Data API`, worked with a framework `Materialize` and implemented and responsive design.
+I was part of the team that made the original app for our Coding Bootcamp Project 1. We used GitHub Projects [here](https://github.com/umairkhalid/movie-planner/projects/1) to coordinate the teamwork, tickets and issues.
 
-We used GitHub Projects [here](https://github.com/umairkhalid/movie-planner/projects/1) to coordinate the teamwork, tickets and issues.
+While making the app, we made fetch calls to third-party APIs like `OMDB API` and `YouTube Data API`, learned about a framework called `Materialize` and used it to implement a modal, some buttons and a loading animation.
 
-Moovee 2 is revamped from a fork of the [original](https://github.com/umairkhalid/movie-planner). Here is a summary of the refactoring:
+Disclosure that this repo, `Moovee V2`, is essentially what I fixed and refactored for best practice, based on the comments I received from the Bootcamp Grader, and is a fork of the [original](https://github.com/umairkhalid/movie-planner):
 
--  refactored to use `async await` rather than `.then`, and also
-
-### User Story
-
-```
-AS A busy movie watcher,
-I WANT to search for upcoming movies, based on my preferences,
-SO THAT I can watch movies that I like.
-```
+| My Changes | Details                                                                 |
+| ---------- | ----------------------------------------------------------------------- |
+| Fix        | I moved all images to the assets/images folder                          |
+| Fix        | I renamed camelCase and snake_case `CSS` variables to kebab-case        |
+| Fix        | I put a feedback message when no movie results are found                |
+| Fix        | I sized the trailer correctly within the modal                          |
+| Fix        | I moved the placeholder out of the way when a history result is clicked |
+| Refactor   | I changed `.then` Promise syntax to `async await`                       |
+| Refactor   | I modularized long multi-script files into one-script files             |
+| Refactor   | I expanded on comments for completeness and accuracy                    |
+| Refactor   | I removed some social media icons and simplified the remaining ones     |
+| Feature    | I fixed the loading animation for the delay of results / trailer        |
 
 ## Table of Contents
 
@@ -34,7 +35,7 @@ SO THAT I can watch movies that I like.
 
 ## Usage
 
-To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-planner/) in Chrome or Safari.
+MOOVEE V2 is deployed: [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). For the original, please see [MOOVEE](https://umairkhalid.github.io/movie-planner/).
 
 ## Screenshots
 
