@@ -1,22 +1,29 @@
-# MOOVEE
+# MOOVEE V2
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-![OMDB API](https://img.shields.io/badge/API-OMDB%20API-red.svg) ![OMDB API](https://img.shields.io/badge/API-YouTube%20Data%20API-red.svg)
+![OMDB](https://img.shields.io/badge/'17-0?label=OMDB%20API&style=for-the-badge&labelColor=white&color=black) ![YouTube Data Api](https://img.shields.io/badge/v3-0?label=YouTube%20Data%20API&style=for-the-badge&labelColor=white&color=black)
 
 ## Description
 
-We made this app to allow users to select and watch trailers of movies that they like.
+This app allows movie-watchers to select and watch movie trailers that they like.
 
-While making the app, we learned to collaborate, and how to work with APIs, working with design libraries (Materialize) and responsive design, GitHub Pull Requests and Projects, Merge Conflicts, the Command Line / Terminal, tickets and issues, DOM traversal and manipulation.
+I was part of the team that made the original app for our Coding Bootcamp Project 1. We used GitHub Projects [here](https://github.com/umairkhalid/movie-planner/projects/1) to coordinate the teamwork, tickets and issues.
 
-### User Story
+While making the app, we made fetch calls to third-party APIs like `OMDB API` and `YouTube Data API`, learned about a framework called `Materialize` and used it to implement a modal, some buttons and a loading animation.
 
-```
-AS A busy movie watcher,
-I WANT to search for upcoming movies, based on my preferences,
-SO THAT I can watch movies that I like.
-```
+Disclosure that this repo, `Moovee V2`, is essentially what I fixed and refactored for best practice, based on the comments I received from the Bootcamp Grader, and is a fork of the [original](https://github.com/umairkhalid/movie-planner):
+
+| My Changes | Details                                                                 |
+| ---------- | ----------------------------------------------------------------------- |
+| Fix        | I moved all images to the assets/images folder                          |
+| Fix        | I renamed camelCase and snake_case `CSS` variables to kebab-case        |
+| Fix        | I put a feedback message when no movie results are found                |
+| Fix        | I sized the trailer correctly within the modal                          |
+| Fix        | I moved the placeholder out of the way when a history result is clicked |
+| Refactor   | I changed `.then` Promise syntax to `async await`                       |
+| Refactor   | I modularized long multi-script files into one-script files             |
+| Refactor   | I expanded on comments for completeness and accuracy                    |
+| Refactor   | I removed some social media icons and simplified the remaining ones     |
+| Feature    | I fixed the loading animation for the delay of results / trailer        |
 
 ## Table of Contents
 
@@ -28,23 +35,38 @@ SO THAT I can watch movies that I like.
 
 ## Usage
 
-To access the app, please open [MOOVEE](https://umairkhalid.github.io/movie-planner/) in Chrome or Safari.
+Deployed at [MOOVEE V2](https://leoelicos.github.io/bcs-07-moovee/). 
+
+### Video Demo
+
+https://user-images.githubusercontent.com/99461390/169696139-661dcf39-7ce9-4a30-8dfd-3d43883a0887.mp4
 
 ## Screenshots
 
-### Screenshot of MOOVEE with Search Result
+### Improvement of Landing Page
+![MOOVEE V2 Landing Page](https://user-images.githubusercontent.com/99461390/169693289-90b3df7f-1817-4524-bc19-68e761230986.jpg)
 
-![MOOVEE Search Result](./assets/images/moovee-search-result.jpg)
+#### Comparison with original
+![compare1](https://user-images.githubusercontent.com/99461390/169694083-133d8082-99b5-4d2c-a62a-12c02b6e7125.jpg)
 
-![MOOVEE Search Result](./assets/images/moovee-search-result-wide.jpg)
+### Improvement of MOOVEE V2 Search Result
+![MOOVEE V2 Search Result](https://user-images.githubusercontent.com/99461390/169693393-d21ea44d-d5d3-42f2-a08b-74840135e199.jpg)
 
-### Screenshot of MOOVEE with Recent Searches
+#### Comparison with original
+![compare2](https://user-images.githubusercontent.com/99461390/169694084-e805a7da-8e8a-417e-b33a-209fc80296d5.jpg)
 
-![MOOVEE Recent Searches](./assets/images/moovee-recent-searches.jpg)
+### Improvement of MOOVEE V2 Recent Searches
+![MOOVEE Recent Searches](https://user-images.githubusercontent.com/99461390/169696197-1fea68fe-5c4c-42c6-b435-920cff458492.jpg)
 
-### Screenshot of MOOVEE with Modal Popup
+#### Comparison with original
+![compare3](https://user-images.githubusercontent.com/99461390/169696634-ec01ae1f-f4b7-4e0b-9e6a-77bd80a52921.jpg)
 
-![MOOVEE Modal Popup](./assets/images/moovee-modal-popup.jpg)
+### Improvement of MOOVEE V2 Trailer
+![MOOVEE V2 Trailer](https://user-images.githubusercontent.com/99461390/169693361-63557cab-69e3-4b0d-a266-af6726905178.jpg)
+
+#### Comparison with original
+![compare4](https://user-images.githubusercontent.com/99461390/169694090-1967d045-6dc5-4f22-bd1e-d966ed51ba4f.jpg)
+![compare5](https://user-images.githubusercontent.com/99461390/169696528-d17f1dab-d607-46ff-a319-c083c4975565.jpg)
 
 ## Documentation
 
